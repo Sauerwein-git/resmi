@@ -29,7 +29,7 @@ export default async function handler(
   const resend = new Resend(apiKey);
 
   const result = await resend.emails.send({
-    from: "ResearchIT <onboarding@resend.dev>",
+    from: "ResearchIT <hello@research-it.ru>",
     to: [
       "hello@research-it.ru",
       "ak@aeros.su",
