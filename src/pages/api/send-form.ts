@@ -1,57 +1,37 @@
-// src/pages/api/send-form.ts
-import { Resend } from "resend";
-import type { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Метод не разрешён" });
-  }
+  if (req.method !== "POST") return res.status(405).end();
 
   const { name, phone } = req.body;
-
-  if (!name || typeof name !== "string" || !name.trim()) {
-    return res.status(400).json({ error: "Имя обязательно" });
+  if (!name || !phone || phone.length < 11) {
+    return res.status(400).json({ error: "Некорректные данные" });
   }
 
-  if (!phone || typeof phone !== "string" || phone.length < 11) {
-    return res.status(400).json({ error: "Некорректный номер телефона" });
-  }
-
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("❌ RESEND_API_KEY не установлен");
-    return res.status(500).json({ error: "Ошибка конфигурации" });
-  }
-
-  const resend = new Resend(apiKey);
-
-  const result = await resend.emails.send({
-    from: "ResearchIT <hello@research-it.ru>",
-    to: [
-      "hello@research-it.ru",
-      "ak@aeros.su",
-      "xenia.vik.eremenko@yandex.ru",
-      "sauerwein9991@gmail.com",
-    ],
-    subject: "Новая заявка на бесплатный аудит",
-    html: `
-      <h2>Новая заявка</h2>
-      <p><strong>Имя:</strong> ${name}</p>
-      <p><strong>Телефон:</strong> ${phone}</p>
-      <p><em>Отправлено через сайт research-it.ru</em></p>
-    `,
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "smtp.mail.ru",
+    port: parseInt(process.env.SMTP_PORT || "465"),
+    secure: true,
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
   });
 
-  if (result.error) {
-    console.error("🔥 Resend error:", result.error);
-    return res
-      .status(500)
-      .json({ error: result.error.message || "Неизвестная ошибка" });
+  try {
+    await transporter.sendMail({
+      from: `"Research IT" <${process.env.SMTP_USER}>`,
+      to: "hello@research-it.ru,ak@aeros.su,xenia.vik.eremenko@yandex.ru,sauerwein9991@gmail.com",
+      subject: "Новая заявка с research-it.ru",
+      text: `Имя: ${name}\nТелефон: ${phone}`,
+    });
+    res.status(200).json({ ok: true });
+  } catch (error) {
+    console.error("Ошибка отправки письма:", error);
+    res.status(500).json({ error: "Не удалось отправить заявку" });
   }
-
-  console.log("✅ Письмо отправлено, ID:", result.data.id);
-  return res.status(200).json({ success: true });
 }

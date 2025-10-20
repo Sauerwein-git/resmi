@@ -10,15 +10,16 @@
   },
   "dependencies": {
     "next": "15.5.3",
+    "nodemailer": "^7.0.9",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "resend": "^6.2.0",
     "swiper": "^12.0.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@react-email/render": "^1.4.0",
     "@types/node": "^20",
+    "@types/nodemailer": "^7.0.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
