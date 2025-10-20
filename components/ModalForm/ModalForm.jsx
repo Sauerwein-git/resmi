@@ -64,14 +64,16 @@ export default function ModalForm({ onClose }) {
         body: JSON.stringify({ name, phone }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         router.push("/thanks");
       } else {
-        const data = await response.json();
+        console.error("API error:", data);
         alert(`Ошибка: ${data.error || "Неизвестная ошибка"}`);
       }
     } catch (err) {
-      console.error(err);
+      console.error("Network error:", err);
       alert("Не удалось отправить заявку. Проверьте соединение.");
     } finally {
       setIsLoading(false);
@@ -115,7 +117,7 @@ export default function ModalForm({ onClose }) {
                   if (digits === "7" || digits === "8") {
                     setPhone(digits);
                   }
-                } else if (phone.length > 0 && digits.length <= 11) {
+                } else if (digits.length <= 11) {
                   setPhone(digits);
                 }
               }}
