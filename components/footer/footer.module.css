@@ -1,0 +1,384 @@
+.background {
+  background-color: rgba(64, 72, 80, 1);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.leftF {
+  display: flex;
+  flex-direction: column;
+}
+
+.placeAnswer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.lTag {
+  color: rgba(255, 255, 255, 1);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  line-height: 100%;
+  font-size: 60.04px;
+  letter-spacing: -1.2px;
+}
+
+.lText {
+  font-family: "VelaSans";
+  font-weight: 400;
+  font-size: 24.56px;
+  line-height: 25.79px;
+  letter-spacing: -0.49px;
+  color: rgba(146, 146, 146, 1);
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: clamp(94.44px, 25.5vw, 415px);
+  letter-spacing: -10.6px;
+  color: #ffffff;
+  white-space: nowrap;
+  margin: 0;
+  line-height: 301px; /* убираем высокий line-height — он мешает при scale */
+  transform-origin: left bottom; /* ← ключевое: масштаб от левого нижнего угла */
+  max-width: 1560px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-height: 350px;
+}
+
+.divrBlock {
+  position: relative;
+  z-index: 10;
+}
+
+.divrBlock {
+  display: flex;
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 240px;
+  font-family: "VelaSans";
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.44px;
+}
+
+.divrBlock a {
+  color: rgba(195, 195, 195, 0.5);
+  text-decoration: none;
+}
+
+.placeText {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.22px;
+}
+
+.tagPlaceHolder:not(:first-child) {
+  margin-top: 40px;
+}
+
+.placeAnswer {
+  font-family: "BebasNeue";
+  color: rgba(255, 255, 255, 1);
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.55px;
+  margin-top: 15px;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(134, 145, 156, 0.15);
+  border-bottom: 2px solid rgba(134, 145, 156, 0.15);
+  display: flex;
+  margin-top: 0px;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(134, 145, 156, 0.15);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+  line-height: 100px;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.imgBlock {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  order: 3;
+}
+
+.invBlock {
+  display: none;
+  margin-top: 20px;
+  border-top: 2px solid rgba(149, 160, 171, 1);
+}
+
+.red {
+  color: rgba(253, 76, 56, 1);
+}
+
+.rightBlock a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tagClient {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: -0.4px;
+  margin-bottom: 30px;
+}
+
+.caseBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  letter-spacing: -0.4px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.textClient {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.22px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(85, 92, 99, 1);
+  }
+
+  .obl {
+    border-bottom: 2px solid rgba(85, 92, 99, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(85, 92, 99, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .smallTag {
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(153, 165, 177, 1);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .block {
+    margin-top: 20px;
+    border-top: none;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0px;
+  }
+
+  .rightBlock {
+    padding-left: 0px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 44px;
+    letter-spacing: -0.45px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .imgBlock {
+    order: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+
+  .imgBlock img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .lTag {
+    order: 2;
+    margin-bottom: 10px;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.8px;
+  }
+
+  .lText {
+    order: 3;
+    font-size: 15.72px;
+    line-height: 17.27px;
+    letter-spacing: -0.3px;
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 100px;
+    letter-spacing: -2px;
+    color: rgba(64, 72, 80, 1);
+    line-height: 100px;
+  }
+
+  .placeText {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.18px;
+  }
+
+  .tagPlaceHolder:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .placeAnswer {
+    font-family: "BebasNeue";
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -0.4px;
+    margin-top: 15px;
+  }
+
+  .caseBlock {
+    flex-direction: inherit;
+  }
+
+  .flex {
+    gap: 0px;
+  }
+
+  .divrBlock {
+    gap: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: -0.16px;
+  }
+
+  .tag {
+    line-height: 78.92px;
+    margin-bottom: 30px;
+    letter-spacing: -2.83px;
+  }
+
+  .placeAnswer {
+    margin-top: 0px;
+  }
+
+  .textClient {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.18px;
+  }
+
+  .tagClient {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 35px;
+    line-height: 60px;
+    letter-spacing: -0.35px;
+  }
+
+  .clientBlock {
+    margin-bottom: 30px;
+  }
+}

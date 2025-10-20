@@ -1,0 +1,196 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.botBox {
+  max-width: 1600px;
+  border-top: 1.67px solid rgba(134, 145, 156, 0.15);
+}
+
+.left {
+  border-right: 1.67px solid rgba(134, 145, 156, 0.15);
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.32px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.left,
+.right {
+  padding-top: 40px;
+  width: 50%;
+}
+
+.box {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 135px;
+  letter-spacing: -3px;
+  max-width: 1200px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.text {
+  margin-top: 60px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.textR {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.32px;
+  color: rgba(134, 145, 156, 1);
+  max-width: 358px;
+}
+
+.block {
+  max-width: 1560px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  border-top: 1px solid rgba(116, 116, 116, 1);
+}
+
+.rightBlock,
+.leftBlock {
+  width: 50%;
+  min-height: 326px;
+  padding-top: 40px;
+
+  box-sizing: border-box;
+}
+
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  border-left: 1px solid rgba(116, 116, 116, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.back {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.56px;
+  color: rgba(134, 145, 156, 1);
+  display: flex;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.back:hover {
+  cursor: pointer;
+}
+
+.mob {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+.back a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 950px) {
+  .mob {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .background {
+    background-color: #404850;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .section {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 60px;
+    letter-spacing: -1.4px;
+    color: #ffffff;
+    margin-top: 30px;
+  }
+
+  .text {
+    font-family: "VelaSans";
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.18px;
+    max-width: 345px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .back {
+    font-family: "VelaSans";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    gap: 5px;
+  }
+}

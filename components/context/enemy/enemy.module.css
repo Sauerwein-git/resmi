@@ -1,0 +1,175 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 89px;
+  letter-spacing: -2px;
+  max-width: 1030px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.arrow {
+  position: relative;
+  top: -4px;
+  font-weight: 600;
+}
+
+.box {
+  display: flex;
+  max-width: 1520px;
+  width: 100%;
+  border-top: 2px solid rgba(238, 238, 238, 1);
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  box-sizing: border-box;
+  width: 50%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.left {
+  border-right: 2px solid rgba(238, 238, 238, 1);
+}
+
+.right {
+  padding-left: 30px;
+}
+
+.num {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.6px;
+  color: rgba(253, 76, 56, 1);
+  margin-bottom: 60px;
+}
+
+.text {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -1.28px;
+  color: rgba(64, 68, 72, 1);
+}
+
+.button {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 1520px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+  gap: 5px;
+  border: none;
+  width: 100%;
+}
+
+.button:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .button {
+    width: 345px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    display: flex;
+    gap: 5px;
+    margin-top: 45px;
+  }
+
+  .arrow {
+    position: relative;
+    top: -3px;
+    font-weight: 600;
+  }
+  .mob {
+    display: block;
+  }
+
+  .tag {
+    font-size: 45px;
+    line-height: 45px;
+    letter-spacing: -0.45px;
+  }
+
+  .box {
+    display: block;
+    border-top: none;
+  }
+
+  .num {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+  }
+
+  .text {
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.24px;
+    max-width: 350px !important;
+  }
+
+  .left {
+    border-right: none;
+    width: 100%;
+  }
+
+  .bT {
+    border-top: 1px solid rgba(224, 228, 231, 1);
+  }
+  .right {
+    padding-left: 0px;
+    width: 100%;
+    border-top: 1px solid rgba(224, 228, 231, 1);
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}

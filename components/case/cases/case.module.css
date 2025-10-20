@@ -1,0 +1,1139 @@
+.background {
+  background-color: rgba(134, 145, 156, 1);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(116, 116, 116, 1);
+  display: flex;
+  margin-top: 40px;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(116, 116, 116, 1);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 100px;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-between;
+}
+
+.textRightBlock {
+  max-width: 400px;
+  width: 100%;
+}
+
+.prevButton {
+  display: flex;
+  gap: 8px;
+  justify-content: end;
+  max-width: 1560px;
+}
+
+.navButtonWrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navButton {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.2s ease;
+}
+
+.navButtonHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.navButtonWrapper:hover .navButton {
+  opacity: 0;
+}
+
+.navButtonWrapper:hover .navButtonHover {
+  opacity: 1;
+}
+
+.triggerButton {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 65px;
+}
+
+.indicatorLine {
+  display: none;
+}
+
+.allBut,
+.contBut,
+.seoBut {
+  text-align: center;
+  width: 100%;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 85px;
+  letter-spacing: -1.1px;
+  color: rgba(130, 142, 153, 1);
+  border-bottom: 3px solid rgba(130, 142, 153, 1);
+}
+
+.allBut:hover,
+.contBut:hover,
+.seoBut:hover {
+  color: rgba(253, 76, 56, 1);
+  border-bottom: 3px solid rgba(253, 76, 56, 1);
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: 3px solid rgba(253, 76, 56, 1);
+  color: rgba(253, 76, 56, 1);
+}
+
+.swiper {
+  margin-top: 40px;
+  max-width: 1560px;
+  width: 100%;
+  margin-left: 30px;
+}
+
+.card {
+  width: 566px;
+  height: 769px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.readButton {
+  width: 506px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  text-align: center;
+  background: rgba(253, 76, 56, 1);
+  border-radius: 12px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.56px;
+  color: rgba(255, 255, 255, 1);
+  box-sizing: border-box;
+}
+
+.readButton:hover {
+  cursor: pointer;
+  background: #ff614f;
+}
+
+.market {
+  background: rgba(242, 242, 242, 1);
+  border-radius: 8px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.18px;
+  color: rgba(112, 128, 144, 1);
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lower {
+  margin-top: 30px;
+}
+
+.result {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  width: 450px;
+  color: rgba(64, 68, 72, 1);
+}
+
+.summary {
+  margin-top: 15px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.swiperSlide {
+  margin-right: 20px;
+}
+
+.botBlock {
+  margin-top: 70px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.tell {
+  margin-top: 30px;
+}
+
+/* Индикатор-ползунок */
+.indicatorContainer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.indicatorLine {
+  position: relative;
+  max-width: 1560px;
+  width: 100%;
+  height: 4px;
+  background-color: rgba(224, 228, 231, 1);
+  border-radius: 2px;
+}
+
+.indicatorSlider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 4px;
+  background-color: rgba(253, 76, 56, 1);
+  border-radius: 2px;
+  transition: left 0.3s ease-out;
+}
+
+/* @media (min-width: 701px) {
+  .indicatorContainer {
+    display: none;
+  }
+} */
+
+@media (max-width: 1260px) {
+  .rightBlock {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(85, 92, 99, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(85, 92, 99, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .smallTag {
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(153, 165, 177, 1);
+    display: flex;
+    justify-content: center;
+  }
+
+  .block {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: none;
+    display: block;
+    margin-top: 0px;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -0.5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    line-height: 44px;
+  }
+
+  .rightBlock {
+    padding-left: 0px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .textRightBlock {
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .prevButton {
+    display: none;
+    gap: 8px;
+  }
+
+  .navButtonWrapper {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+
+  .navButton {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.2s ease;
+  }
+
+  .navButtonHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .navButtonWrapper:hover .navButton {
+    opacity: 0;
+  }
+
+  .navButtonWrapper:hover .navButtonHover {
+    opacity: 1;
+  }
+
+  .triggerButton {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .allBut,
+  .contBut,
+  .seoBut {
+    text-align: center;
+    width: 100%;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 60px;
+    letter-spacing: -0.3px;
+    color: rgba(130, 142, 153, 1);
+    border-bottom: 3px solid rgba(130, 142, 153, 1);
+  }
+
+  .allBut:hover,
+  .contBut:hover,
+  .seoBut:hover {
+    color: rgba(253, 76, 56, 1);
+    border-bottom: 3px solid rgba(253, 76, 56, 1);
+    cursor: pointer;
+  }
+
+  .active {
+    border-bottom: 3px solid rgba(253, 76, 56, 1);
+    color: rgba(253, 76, 56, 1);
+  }
+
+  .swiper {
+    margin-top: 0px;
+    max-width: 1560px;
+    width: 100%;
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .card {
+    width: 345px;
+    height: 645px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .readButton {
+    width: 305px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
+    text-align: center;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 12px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+  }
+
+  .market {
+    background: rgba(242, 242, 242, 1);
+    border-radius: 8px;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+    color: rgba(112, 128, 144, 1);
+  }
+
+  .upper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .upper img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .lower {
+    margin-top: 40px;
+  }
+
+  .result {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+    width: 305px;
+    color: rgba(64, 68, 72, 1);
+  }
+
+  .summary {
+    margin-top: 15px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(134, 145, 156, 1);
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .swiperSlide {
+    margin-right: 20px;
+  }
+
+  .botBlock {
+    margin-top: 20px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    max-width: 305px;
+    width: 100%;
+  }
+
+  .tell {
+    margin-top: 20px;
+  }
+
+  .indicatorContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .indicatorLine {
+    position: relative;
+    max-width: 345px;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(166, 177, 186, 1);
+    border-radius: 2px;
+  }
+
+  .indicatorLine {
+    display: block;
+  }
+
+  .indicatorSlider {
+    position: absolute;
+    max-width: 10%;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 2px;
+    transition: left 0.3s ease-out;
+  }
+}
+
+.modalBottomImage {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.bottomImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 1452px;
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  color: #000;
+  z-index: 1001;
+}
+
+.closeButton {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Заголовок и цель клиента */
+.magazine {
+  padding: 2px 10px 2px 10px;
+  background: rgba(253, 76, 56, 1);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 1);
+  font-family: "VelaSans", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.18px;
+  text-align: center;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.tagModal {
+  font-family: "BebasNeue", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: rgba(64, 68, 72, 1);
+  margin-top: 0px;
+  margin-bottom: 10px;
+  max-width: 279px;
+  width: 100%;
+}
+
+.firstTag {
+  margin-top: 20px !important;
+}
+
+.modalFirstSection {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid rgba(223, 222, 222, 1);
+}
+
+.leftModalFirstSection {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  max-width: 279px;
+  width: 100%;
+}
+
+.rightBlockFirst {
+  font-family: "VelaSans", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  letter-spacing: -0.4px;
+  color: rgba(134, 145, 156, 1);
+  margin-left: 0px;
+}
+
+.client {
+  margin-left: 140px !important;
+  margin-bottom: 30px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  margin-top: 0px;
+  font-weight: 400 !important;
+  max-width: 650px !important;
+  width: 100% !important;
+  font-family: "VelaSans" !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  letter-spacing: -0.4px !important;
+}
+
+/* Что мы сделали */
+.secondModal {
+  margin-top: 30px;
+}
+
+.rightModalFirstSection {
+  margin-left: 141px;
+}
+
+.stepItem {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.stepLeft {
+  max-width: 303px;
+  width: 100%;
+}
+
+.resultNumber,
+.stepNumber {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.4px;
+  color: rgba(253, 76, 56, 1);
+  margin: 0;
+}
+
+.resultTitle,
+.stepTitle {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  color: rgba(64, 68, 72, 1);
+  max-width: 323px;
+  width: 100%;
+}
+
+.stepDescription {
+  font-family: "VelaSans" !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  letter-spacing: -0.4px !important;
+  max-width: 511px !important;
+  width: 100% !important;
+  color: rgba(134, 145, 156, 1) !important;
+  margin-left: 60px !important;
+}
+
+/* Результаты */
+.modalResultsSection {
+  margin-top: 40px;
+  display: flex;
+}
+
+.modalResultsSection .tagModal {
+  max-width: 242px;
+  width: 100%;
+}
+
+.resultBlock {
+  display: block;
+  max-width: 890px;
+  width: 100%;
+  margin-left: 180px;
+}
+
+.firstResultBlock {
+  display: flex;
+}
+
+.secondResultBlock {
+  display: flex;
+}
+
+.resultItem {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.firstResultItem:first-of-type {
+  max-width: 323px;
+  width: 100%;
+}
+
+.firstResultItem:not(:first-of-type) {
+  max-width: 346px !important;
+  width: 100% !important;
+  margin-left: 40px;
+}
+
+.secondResultItem {
+  display: block;
+}
+
+.secondResultItem:first-of-type {
+  max-width: 323px;
+  width: 100%;
+}
+
+.secondResultItem:not(:first-of-type) {
+  margin-left: 40px;
+}
+
+.resultLeft {
+  max-width: 303px;
+  width: 100%;
+}
+
+.margintResult {
+  margin-top: 0px !important;
+}
+
+.resultDescription {
+  font-family: "VelaSans" !important;
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  line-height: 24px !important;
+  letter-spacing: -0.4px !important;
+  color: rgba(134, 145, 156, 1) !important;
+  margin-left: 0px !important;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.secondResultDescription {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  color: rgba(134, 145, 156, 1);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.secondResultDescription:not(:first-of-type) {
+  max-width: 521px !important;
+  width: 100% !important;
+}
+
+.secondResultTitle {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+  color: rgba(64, 68, 72, 1);
+}
+
+/* === МОБИЛЬНАЯ ВЕРСИЯ МОДАЛЬНОГО ОКНА === */
+@media (max-width: 760px) {
+  .modalOverlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .modalContent {
+    max-width: 375px !important;
+    width: 100% !important;
+    padding: 15px;
+    border-radius: 12px;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    box-sizing: border-box;
+  }
+
+  .closeButton {
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+  }
+
+  /* Заголовок модалки */
+  .tagModal {
+    font-family: "BebasNeue", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: rgba(64, 68, 72, 1);
+    margin-top: 0;
+    margin-bottom: 15px;
+    max-width: 100%;
+    text-transform: uppercase;
+  }
+
+  .magazine {
+    padding: 2px 8px;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 1);
+    font-family: "VelaSans", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    text-align: center;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+    width: fit-content;
+  }
+
+  /* Что мы сделали — секция */
+  .modalFirstSection {
+    display: block;
+    border-bottom: none;
+    margin-bottom: 20px;
+  }
+
+  .leftModalFirstSection {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .rightBlockFirst {
+    font-family: "VelaSans", sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.16px;
+    color: rgba(134, 145, 156, 1);
+    margin-left: 0;
+  }
+
+  .client {
+    margin-left: 0 !important;
+    margin-bottom: 15px;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.16px !important;
+    padding-right: 11px;
+  }
+
+  .firstResultItem:not(:first-of-type) {
+    margin-left: 0px;
+  }
+
+  .firstResultItem:first-of-type {
+    width: 90% !important;
+  }
+
+  .firstResultItem:not(:first-of-type) {
+    width: 90% !important;
+  }
+  /* Шаги */
+  .stepItem {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(248, 248, 248, 1);
+    border-radius: 8px;
+  }
+
+  .stepLeft {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .resultNumber,
+  .stepNumber {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -0.36px;
+    color: rgba(253, 76, 56, 1);
+    margin: 0;
+  }
+
+  .resultTitle,
+  .stepTitle {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: rgba(64, 68, 72, 1);
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .stepDescription {
+    font-family: "VelaSans" !important;
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.16px !important;
+    color: rgba(134, 145, 156, 1) !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  /* Результаты */
+  .modalResultsSection {
+    margin-top: 30px;
+    display: block;
+  }
+
+  .modalResultsSection .tagModal {
+    max-width: 100%;
+    width: 100%;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .resultBlock {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .firstResultBlock,
+  .secondResultBlock {
+    display: block;
+  }
+
+  .resultItem {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(248, 248, 248, 1);
+    border-radius: 8px;
+  }
+
+  .resultLeft {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .margintResult {
+    margin-top: 0 !important;
+  }
+
+  .resultDescription {
+    font-family: "VelaSans" !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 20px !important;
+    letter-spacing: -0.16px !important;
+    color: rgba(134, 145, 156, 1) !important;
+    margin-left: 0 !important;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  /* Цифры результатов */
+  .resultNumber {
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(253, 76, 56, 1);
+    margin: 0;
+  }
+
+  .resultTitle {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgba(64, 68, 72, 1);
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  .rightModalFirstSection {
+    margin-left: 0px;
+  }
+
+  /* Для раздела "РЕЗУЛЬТАТЫ ЗА 4 МЕСЯЦА" — можно добавить отдельный класс, если нужно */
+  .resultsHeader {
+    font-family: "BebasNeue", sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: rgba(64, 68, 72, 1);
+    margin-top: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  /* Если в данных есть "resultsTitle", можно использовать его как заголовок */
+  .modalResultsSection .tagModal {
+    text-transform: uppercase;
+  }
+
+  .secondResultItem {
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(248, 248, 248, 1);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .secondResultItem:not(:first-of-type) {
+    margin-left: 0px;
+  }
+
+  .secondResultTitle {
+    font-size: 40px;
+  }
+
+  .resultTitle {
+    font-size: 40px !important;
+  }
+  .secondResultItem {
+    width: 90% !important;
+  }
+
+  .tagModal {
+    font-size: 50px !important;
+    letter-spacing: 0px !important;
+    line-height: 100% !important;
+  }
+}

@@ -1,0 +1,92 @@
+.background {
+  background-color: rgba(134, 145, 156, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 131px;
+  letter-spacing: -2px;
+  max-width: 1030px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.imageContent {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24.45px;
+  line-height: 22.41px;
+  letter-spacing: -0.98px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.text {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.imageLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.imageLink img {
+  display: block;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    margin-bottom: 33px;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 22.41px;
+    letter-spacing: -0.8px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  .imageLink img {
+    width: 345px;
+    height: 219px;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}

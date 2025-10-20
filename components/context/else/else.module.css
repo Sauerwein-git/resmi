@@ -1,0 +1,38 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 131px;
+  letter-spacing: -3px;
+  max-width: 970px;
+  color: rgba(64, 72, 80, 1);
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-size: 70px;
+    line-height: 62px;
+    letter-spacing: -0.7px;
+  }
+}

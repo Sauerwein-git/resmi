@@ -1,0 +1,171 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 97px;
+  letter-spacing: -2px;
+  max-width: 524px;
+  width: 100%;
+  color: rgba(64, 72, 80, 1);
+}
+
+.box {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.smallBox {
+  width: 365px;
+  height: 365px;
+  box-sizing: border-box;
+  padding: 30px;
+  border-radius: 12px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.smallBox img {
+  position: absolute;
+  bottom: 30;
+  right: 30;
+}
+
+.bigBox {
+  width: 750px;
+  height: 365px;
+  border-radius: 12px;
+  background: rgba(253, 76, 56, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 30px;
+  box-sizing: border-box;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.bigBox a {
+  color: inherit;
+}
+
+.massZone {
+  position: absolute;
+  bottom: 30;
+  right: 30;
+  display: flex;
+  gap: 27px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -0.4px;
+}
+
+.massZone a {
+  height: 44px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -0.7px;
+    max-width: 345px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+  }
+
+  .box {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .smallBox img {
+    width: 32px;
+    height: 32px;
+    bottom: 20;
+    right: 20;
+  }
+
+  .smallBox {
+    width: 167px;
+    height: 173px;
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -0.24px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .bigBox {
+    width: 345px;
+    height: 190px;
+
+    padding: 20px;
+  }
+
+  .bigBoxTag {
+    font-size: 32px;
+    line-height: 31px;
+    letter-spacing: -0.32px;
+  }
+
+  .massZone {
+    font-size: 30px;
+  }
+
+  .massZone {
+    position: absolute;
+    bottom: 20;
+    right: 20;
+  }
+}

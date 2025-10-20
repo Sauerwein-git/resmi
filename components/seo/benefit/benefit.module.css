@@ -1,0 +1,380 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding: 80px 40px;
+}
+
+.section {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.arrow {
+  display: flex;
+  position: relative;
+  top: -3px;
+}
+
+.ltb {
+  display: flex;
+}
+
+.NEW {
+  margin-right: 23px;
+  background: rgba(253, 76, 56, 1);
+  border: none;
+  border-radius: 8px;
+  width: 75px;
+  height: 34px;
+  box-sizing: border-box;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  /*имба*/
+  display: grid;
+  place-items: center;
+  /*имба*/
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.tag {
+  font-family: "BebasNeue";
+  max-width: 533px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 90px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.upT {
+  display: flex;
+  max-width: 1540px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.tagUp,
+.textTag {
+  width: 50%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: end;
+}
+
+.textR {
+  padding-left: 40px;
+  display: flex;
+  align-items: end;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  max-width: 459px;
+  margin-bottom: 10px;
+}
+
+.secText {
+  margin-top: 40px;
+  font-family: "VelaSans";
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 33px;
+  letter-spacing: -0.64px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.block {
+  display: flex;
+  max-width: 1520px;
+  width: 100%;
+  border-top: 2px solid rgba(238, 238, 238, 1);
+  box-sizing: border-box;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  padding-top: 30px;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.last {
+  padding-bottom: 0;
+}
+
+.leftBlock {
+  display: flex;
+  border-right: 2px solid rgba(238, 238, 238, 1);
+}
+
+.rightBlock {
+  padding-left: 40px;
+}
+
+.numl {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.6px;
+  color: rgba(134, 145, 156, 0.5);
+}
+
+.tagl {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: rgba(64, 68, 72, 1);
+  margin-left: 20px;
+}
+
+.textr {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.textr:not(:first-of-type) {
+  margin-top: 30px;
+}
+
+.button {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 1520px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+  gap: 5px;
+}
+
+.button:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
+}
+
+.invBlock {
+  display: none;
+  margin-top: 40px;
+  border-top: 1px solid rgba(224, 228, 231, 1);
+}
+
+.swiper {
+  display: none;
+}
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .reviewCard {
+    display: flex;
+    flex-direction: column;
+    width: 307px;
+  }
+
+  .swiperSlide:not(:first-child) {
+    margin-left: 15px;
+  }
+
+  .reviewCard:not(:first-of-type) {
+    margin-left: 30px;
+  }
+
+  .upT {
+    flex-direction: column;
+  }
+
+  .tagUp,
+  .textTag {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: end;
+  }
+
+  .textR {
+    padding-left: 0px;
+    margin-top: 20px;
+  }
+
+  .reviewText {
+    flex: 1;
+  }
+
+  .reviewParagraph {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .mediaAndTheses {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .reviewTag {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+
+  .reviewNum {
+    font-size: 14px;
+    color: #888;
+  }
+
+  .reviewNum {
+    font-family: "BebasNeue";
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(134, 145, 156, 0.5);
+    font-weight: 700;
+    margin-top: 20px;
+  }
+
+  .reviewTag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+    margin-top: 20px;
+  }
+
+  .reviewText {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    width: 307px;
+    color: rgba(134, 145, 156, 1);
+    margin-top: 20px;
+  }
+
+  .reviewTextItem {
+    margin: 0 0 20px 0;
+  }
+
+  .reviewTextItem:last-child {
+    margin-bottom: 0;
+  }
+
+  .button {
+    width: 345px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    display: flex;
+    gap: 5px;
+  }
+
+  .arrow {
+    position: relative;
+    top: -3px;
+    font-weight: 600;
+  }
+
+  .indicatorContainer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .indicatorLine {
+    position: relative;
+    max-width: 345px;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(224, 228, 231, 1);
+    border-radius: 2px;
+  }
+
+  .indicatorLine {
+    display: block;
+  }
+
+  .indicatorSlider {
+    position: absolute;
+    max-width: 10%;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(253, 76, 56, 1);
+    border-radius: 2px;
+    transition: left 0.3s ease-out;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 40px;
+    border-top: 1px solid rgba(224, 228, 231, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 1px solid rgba(224, 228, 231, 1);
+    height: 35px;
+    width: 50%;
+    padding-bottom: 10px;
+  }
+
+  .reviewTh {
+    font-family: "VelaSans";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: -0.48px;
+    color: rgba(64, 72, 80, 1);
+    margin-top: 20px;
+  }
+}

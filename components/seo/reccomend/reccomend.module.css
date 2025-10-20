@@ -1,0 +1,171 @@
+.background {
+  background-color: rgba(253, 76, 56, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.section {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 97px;
+  letter-spacing: -2px;
+  max-width: 1124px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.smallText {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -1.28px;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 20px;
+}
+
+.textBox {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.box {
+  box-sizing: border-box;
+  display: flex;
+  max-width: 1520px;
+  width: 100%;
+  margin-top: 60px;
+  border-top: 1.67px solid rgba(255, 255, 255, 0.3);
+}
+
+.underText {
+  padding-top: 20px;
+}
+
+.left,
+.right {
+  box-sizing: border-box;
+  padding-top: 30px;
+  width: 50%;
+}
+
+.left {
+  border-right: 1.67px solid rgba(255, 255, 255, 0.3);
+}
+
+.right {
+  padding-left: 30px;
+}
+
+.button {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(64, 68, 72, 1);
+  max-width: 1520px;
+  height: 90px;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+  gap: 5px;
+  border: none;
+  width: 100%;
+}
+
+.arrow {
+  position: relative;
+  top: -3px;
+}
+
+.button:hover {
+  background: rgba(242, 242, 242, 1);
+  cursor: pointer;
+}
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .button {
+    width: 345px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    display: flex;
+    gap: 5px;
+    margin-top: 0px;
+  }
+
+  .arrow {
+    position: relative;
+    top: -2px;
+    font-weight: 600;
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+  }
+
+  .smallText {
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: -0.96px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-right: none;
+    border-top: 1.85px solid rgba(255, 255, 255, 0.25);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+  }
+
+  .textBox {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+}

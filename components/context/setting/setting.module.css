@@ -1,0 +1,325 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 97px;
+  letter-spacing: -2px;
+  max-width: 742px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.arrow {
+  position: relative;
+  top: -4px;
+  font-weight: 600;
+}
+
+.upBox {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+  .upBox {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contBox {
+  display: flex;
+  padding-top: 41px;
+  padding-bottom: 41px;
+  border-top: 2px solid rgba(238, 238, 238, 1);
+  margin-top: 70px;
+}
+
+.leftCont {
+  display: flex;
+  gap: 32px;
+  flex-wrap: nowrap;
+}
+
+.leftCont,
+.rightCont {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.rightCont {
+  padding-left: 200px;
+  margin-right: 40px;
+}
+
+.num {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: -0.6px;
+  color: rgba(253, 76, 56, 1);
+}
+
+.title {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -1.28px;
+  color: rgba(64, 68, 72, 1);
+}
+
+.text {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .arrow {
+    position: relative;
+    top: -3px;
+    font-weight: 600;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
+
+.button {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+  width: 459px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+  border: none;
+}
+
+.button:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
+}
+
+@media (max-width: 1500px) {
+  .contBox {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 41px;
+    padding-bottom: 41px;
+    border-top: 2px solid rgba(238, 238, 238, 1);
+    margin-top: 70px;
+  }
+
+  .rightCont {
+    padding-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .contBox {
+    flex-direction: column;
+    gap: 40px;
+    max-width: 800px;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .pc {
+    display: none;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+  }
+
+  .section {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    letter-spacing: -0.45px;
+    color: rgba(64, 72, 80, 1);
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    margin-bottom: 30px;
+  }
+  .blogMobile {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .swiperMobile {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .blogBox {
+    width: 290px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-right: 0;
+  }
+
+  .num {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4px;
+    color: rgba(253, 76, 56, 1);
+  }
+
+  .boxTag {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.24px;
+    color: rgba(64, 72, 80, 1);
+    margin-top: 15px;
+  }
+
+  .textTag {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(134, 145, 156, 1);
+    margin-top: 10px;
+  }
+
+  .customProgress {
+    width: 290px;
+    height: 2px;
+    background: rgba(224, 228, 231, 1);
+    border-radius: 1px;
+    margin: 20px auto 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progressFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 1px;
+    transition: width 0.3s ease;
+  }
+
+  .button {
+    width: 345px;
+    height: 70px;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "BebasNeue";
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4px;
+    color: rgba(255, 255, 255, 1);
+    margin-top: 20px;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .button:hover {
+    background: rgba(255, 97, 79, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 1px solid rgba(224, 228, 231, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 1px solid rgba(224, 228, 231, 1);
+    margin-bottom: 20px;
+  }
+}

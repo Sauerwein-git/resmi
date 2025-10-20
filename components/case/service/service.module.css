@@ -1,0 +1,199 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1522px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  display: flex;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 131px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.smallBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.graybox,
+.blackbox {
+  width: 751px;
+  height: 164px;
+  box-sizing: border-box;
+  padding: 30px;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.blackbox {
+  background: rgba(64, 72, 80, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.graybox {
+  background: rgba(134, 145, 156, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.imagebox {
+  display: flex;
+  gap: 14px;
+}
+
+.textSB {
+  max-width: 500px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 56px;
+  letter-spacing: -0.6px;
+}
+
+.bigBox {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 27px;
+  margin-top: 60px;
+}
+
+.boxBB {
+  width: 489px;
+  height: 183px;
+  box-sizing: border-box;
+  padding: 30px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+  border-radius: 12px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iconBB {
+  margin-left: auto;
+}
+
+.gray {
+  background: rgba(242, 242, 242, 1);
+  color: rgba(64, 72, 80, 1);
+}
+
+.semiBlack {
+  background: rgba(134, 145, 156, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.black {
+  background: rgba(64, 72, 80, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.mt {
+  margin-top: 120px;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+  }
+
+  .smallBox {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .graybox,
+  .blackbox {
+    width: 345px;
+    height: 89px;
+    padding: 20px;
+  }
+
+  .graybox img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .blackbox img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .imagebox {
+    gap: 8px;
+  }
+
+  .mt {
+    margin-top: 40px;
+  }
+
+  .bigBox {
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .boxBB {
+    width: 345px;
+    height: 72px;
+    padding: 20px;
+    font-size: 28px;
+    line-height: 26px;
+    letter-spacing: -0.28px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .boxBB img {
+    width: 27px;
+    height: 25px;
+  }
+
+  .textSB {
+    font-size: 28px;
+    line-height: 29px;
+    letter-spacing: -0.28px;
+  }
+}

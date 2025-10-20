@@ -1,0 +1,281 @@
+.background {
+  background-color: rgba(253, 76, 56, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 89px;
+  letter-spacing: -2px;
+  max-width: 653px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.arrow {
+  position: relative;
+  top: -4px;
+  font-weight: 600;
+}
+
+.upBox {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.smallBlogTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 56px;
+  letter-spacing: -0.5px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  width: 135px;
+}
+
+.smallBlogText {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 535px;
+}
+
+.monitorBox {
+  max-width: 1530px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  border-top: 1.85px solid rgba(255, 255, 255, 0.25);
+  margin-top: 40px;
+  display: flex;
+}
+
+.monitorBox img {
+  padding-left: 36px;
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.images {
+  display: flex;
+  align-items: end;
+}
+
+.smallBlog {
+  display: flex;
+  gap: 60px;
+}
+
+.leftPart,
+.rightPart {
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.left,
+.right {
+  display: flex;
+  width: 50%;
+  align-items: end;
+}
+
+.right {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -1.24px;
+  padding-left: 80px;
+}
+
+.textUp {
+  max-width: 400px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.textBot {
+  max-width: 440px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.button {
+  width: 729px;
+  height: 90px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.56px;
+  color: rgba(64, 68, 72, 1);
+  margin-top: 20px;
+  gap: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  background: rgba(242, 242, 242, 1);
+}
+
+.pBm {
+  padding-bottom: 60px;
+}
+
+.pT {
+  padding-top: 60px !important;
+}
+
+@media (max-width: 1515px) {
+  .monitorBox {
+    display: block;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
+  .leftPart,
+  .rightPart {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .monitorBox img {
+    padding-left: 36px;
+    position: relative;
+    bottom: -4.5px;
+  }
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .arrow {
+    position: relative;
+    top: -2px;
+    font-weight: 600;
+  }
+
+  .upBox {
+    display: block;
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+  }
+
+  .pT {
+    padding-top: 30px !important;
+  }
+  .left,
+  .right {
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .right {
+    margin-top: 25px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    border-bottom: 1.85px solid rgba(255, 255, 255, 0.25);
+    padding-bottom: 25px;
+  }
+
+  .textBot {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .button {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    gap: 2px;
+    height: 70px;
+  }
+  .mob {
+    display: block;
+  }
+
+  .right {
+    border-bottom: none;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .smallBlog {
+    display: block;
+    padding-bottom: 20px !important;
+  }
+
+  .smallBlogTag {
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0.64px;
+    margin-bottom: 20px;
+  }
+
+  .smallBlogText {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .pBm {
+    padding-bottom: 20px;
+  }
+
+  .monitorBox img {
+    padding-left: 0px;
+    width: 323px;
+    height: 243px;
+    position: relative;
+    margin-left: 10px;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}

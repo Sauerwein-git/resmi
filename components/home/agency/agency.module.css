@@ -1,0 +1,175 @@
+.background {
+  background-color: rgba(64, 72, 80, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.textTag {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  margin-top: 40px;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(255, 255, 255, 0.15);
+  font-family: "VelaSans";
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.32px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 39px;
+}
+
+.wT {
+  max-width: 671px;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 64px;
+  letter-spacing: -0.6px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.wTag {
+  max-width: 633px;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 132px;
+  letter-spacing: -3px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.red {
+  color: rgba(253, 76, 56, 1);
+}
+
+.mob {
+  display: none;
+}
+
+.invBlock {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 56px;
+    letter-spacing: -0.6px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .block {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 2px solid rgba(255, 255, 255, 0.15);
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.48px;
+    color: rgba(255, 255, 255, 1);
+    line-height: 26px;
+    padding-bottom: 20px;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(85, 92, 99, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(85, 92, 99, 1);
+    height: 35px;
+    width: 50%;
+    padding-bottom: 10px;
+  }
+
+  .wT {
+    max-width: 671px;
+  }
+
+  .rightBlock {
+    padding-left: 0px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 41px;
+    display: flex;
+    text-align: left;
+    letter-spacing: -0.6px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .wTag {
+    max-width: 633px;
+  }
+}

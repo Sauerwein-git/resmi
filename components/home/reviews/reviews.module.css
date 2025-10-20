@@ -1,0 +1,306 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(134, 145, 156, 0.15);
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(134, 145, 156, 0.15);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+  line-height: 70px;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.prevButton {
+  display: flex;
+  justify-content: end;
+  gap: 8px;
+}
+
+.navButtonWrapper {
+  display: flex;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.navButton {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.2s ease;
+}
+
+.navButtonWrapper:hover .navButton {
+  filter: brightness(0.8);
+}
+
+.imageWrapper {
+  width: 147px;
+  height: 81px;
+}
+
+.reviewCard {
+  box-sizing: border-box;
+  height: 703px;
+  width: 493px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviewCard p {
+  margin: 0px;
+}
+
+.swiperSlide {
+  margin-right: 20px;
+}
+
+.swiper {
+  max-width: 1520px;
+  width: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.thesesList {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.18px;
+  color: rgba(112, 128, 144, 1);
+  flex-wrap: wrap;
+}
+
+.thesisItem {
+  width: fit-content;
+  height: fit-content;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  border-radius: 8px;
+  background: rgba(242, 242, 242, 1);
+}
+
+.reviewText {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.24px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.indicatorContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.indicatorLine {
+  width: 345px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  position: relative;
+  border-radius: 2px;
+}
+
+.indicatorSlider {
+  position: absolute;
+  top: 0;
+  width: 10%; /* ширина ползунка — можно подстроить */
+  height: 100%;
+  background-color: rgba(253, 76, 56, 1); /* или ваш основной цвет */
+  border-radius: 2px;
+  transition: left 0.3s ease;
+}
+
+.indicatorContainer {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .background {
+    background-color: rgba(242, 242, 242, 1);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .block {
+    margin-top: 20px;
+    border-top: none;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0px;
+  }
+
+  .thesesList {
+    display: flex;
+    gap: 4px;
+    margin-top: 15px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.14px;
+    color: rgba(112, 128, 144, 1);
+    flex-wrap: wrap;
+  }
+
+  .thesisItem {
+    width: fit-content;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    border-radius: 8px;
+    background: rgba(242, 242, 242, 1);
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -0.5px;
+    color: rgba(64, 72, 80, 1);
+    line-height: 44px;
+  }
+
+  .smallTag {
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(153, 165, 177, 1);
+    display: flex;
+    justify-content: center;
+  }
+  .indicatorContainer {
+    display: block;
+  }
+  .imageWrapper {
+    width: 87px;
+    height: 48px;
+  }
+  .prevButton {
+    display: none;
+  }
+
+  .swiper {
+    margin-left: 0px;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(224, 228, 231, 1);
+  }
+
+  .reviewCard {
+    box-sizing: border-box;
+    height: 657px;
+    width: 307px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(224, 228, 231, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .reviewText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(64, 72, 80, 1);
+  }
+}

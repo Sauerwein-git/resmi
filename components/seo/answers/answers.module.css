@@ -1,0 +1,191 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 97px;
+  letter-spacing: -2px;
+  max-width: 570px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.box {
+  display: flex;
+  box-sizing: border-box;
+}
+
+.left,
+.right {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.right {
+  padding-left: 40px;
+}
+
+.akImg {
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  background: rgba(253, 76, 56, 1);
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.akUp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.akTag {
+  max-width: 555px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 56px;
+  letter-spacing: -0.55px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.akText {
+  max-width: 626px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  margin-top: 15px;
+}
+
+.akkord {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  border-bottom: 2px solid rgba(64, 72, 80, 0.15);
+}
+
+.akkord:not(:first-child) {
+  margin-top: 40px;
+}
+
+.rotated {
+  transform: rotate(45deg);
+}
+
+.akImg:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 48px;
+    letter-spacing: -0.5px;
+    max-width: 570px;
+    color: rgba(64, 72, 80, 1);
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .right {
+    padding-left: 0px;
+    margin-top: 40px;
+  }
+
+  .akImg {
+    width: 48px;
+    height: 48px;
+    box-sizing: border-box;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .akImg img {
+    width: 14px;
+    height: 14px;
+  }
+
+  .akUp {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .akTag {
+    max-width: 272px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 35px;
+    letter-spacing: -0.35px;
+    color: rgba(64, 72, 80, 1);
+  }
+
+  .akText {
+    max-width: 626px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: rgba(134, 145, 156, 1);
+    margin-top: 15px;
+  }
+
+  .akkord {
+    box-sizing: border-box;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(64, 72, 80, 0.15);
+  }
+
+  .akkord:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .rotated {
+    transform: rotate(45deg);
+  }
+
+  .akImg:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,945 @@
+.background {
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+}
+
+.soon {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(253, 76, 56, 1);
+  width: 75px;
+  border-radius: 8px;
+  padding-bottom: 7px;
+  padding-top: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid #edeff0;
+  display: flex;
+  margin-top: 40px;
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid #edeff0;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  letter-spacing: -2px;
+  color: #404850;
+  line-height: 100px;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: #86919c;
+}
+
+.cartBlock {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.contextCart,
+.seoCart {
+  width: 751px;
+  padding: 30px;
+  height: 389px;
+  border: none;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.contextCart:hover,
+.seoCart:hover {
+  border: 5px solid #fd4c38;
+  padding: 25px;
+}
+
+.contextCart {
+  background: #86919c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.upFloor {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartTag {
+  max-width: 400px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  letter-spacing: -0.6px;
+  line-height: 56px;
+  color: #ffffff;
+}
+
+.botFloor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "VelaSans";
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.56px;
+  color: #ffffff;
+}
+
+.botFloor img {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.seoTagWidth {
+  width: 380px !important;
+}
+
+.botFloor img:hover {
+  cursor: pointer;
+}
+
+.imgCart {
+  display: flex;
+  gap: 14px;
+}
+
+.seoCart {
+  margin-top: 20px;
+  background: #404850;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightCartBlock {
+  width: 749px;
+  height: 798px;
+  background: #fd4c38;
+  border-radius: 12px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.auditTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+  width: 270px;
+}
+
+.auditText {
+  font-family: "VelaSans";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.56px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 20px;
+}
+
+.leftCartBlock,
+.rightCartBlock {
+  flex-shrink: 0;
+}
+
+.inputs {
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.formInput {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  width: 689px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.48px;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+.confirmZone {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonZone {
+  width: 353px;
+  display: flex;
+}
+
+.checkBox {
+  width: 23px;
+  height: 24px;
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.checkBox:hover {
+  cursor: pointer;
+}
+
+.conf {
+  margin-left: 14px;
+  font-family: "VelaSans";
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.confLink {
+  text-decoration: underline;
+}
+
+.conf a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.confLink:hover {
+  cursor: pointer;
+}
+
+.massZone {
+  display: flex;
+  gap: 27px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  letter-spacing: -0.4px;
+}
+
+.massZone a {
+  height: 44px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  border-bottom: 2px solid currentColor;
+}
+
+.textSite {
+  max-width: 651px;
+}
+
+.blockBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 493px;
+  height: 436px;
+  box-sizing: border-box;
+  background: rgba(242, 242, 242, 1);
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boxUp {
+  display: flex;
+  justify-content: space-between;
+}
+
+.upTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 53px;
+  letter-spacing: -0.55px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.boxBot {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 30px;
+  letter-spacing: -0.56px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.affButton {
+  border: none;
+  color: rgba(64, 72, 80, 1);
+  background: rgba(255, 255, 255, 1);
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.56px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 5px;
+  height: 90px;
+  box-sizing: border-box;
+}
+
+.affButton img {
+  filter: brightness(0.25) saturate(0);
+  position: relative;
+  justify-content: end;
+  align-items: center;
+  top: -1px;
+}
+
+.inputs input {
+  color: rgba(255, 255, 255, 0.89);
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+}
+
+.formInput::placeholder {
+  color: rgba(255, 255, 255, 0.89);
+  border: none;
+  border-width: none;
+  border-color: none;
+}
+
+.affButton:hover {
+  background: rgba(242, 242, 242, 1);
+  cursor: pointer;
+}
+
+.formInput:focus {
+  outline: none;
+  box-shadow: none;
+  border: none; /* если нужно полностью убрать границу */
+}
+
+.leftPos {
+  display: flex;
+  gap: 15px;
+}
+
+.leftPos img {
+  margin-top: 7px;
+}
+
+.redDotWrapper {
+  display: none;
+}
+
+.contextCart:hover .redDotWrapper {
+  display: inline-block;
+}
+
+.seoCart:hover .redDotWrapper {
+  display: inline-block;
+}
+
+.formInputWrapper {
+  position: relative;
+}
+
+.checkBox {
+  width: 23px;
+  height: 24px;
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.checkBox.checked {
+  background-color: white;
+  position: relative;
+}
+
+.checkBox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fd4c38;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.invBlock {
+  display: none;
+}
+
+.mob {
+  display: none;
+}
+
+@media (max-width: 1599px) {
+  .cartBlock {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1107px) {
+  .blockBox {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin-top: 40px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .smallTag {
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(153, 165, 177, 1);
+    display: flex;
+    justify-content: center;
+  }
+
+  .soon {
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(253, 76, 56, 1);
+    width: 75px;
+    border-radius: 8px;
+    padding-bottom: 7px;
+    padding-top: 9px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid #edeff0;
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid #edeff0;
+    height: 35px;
+    width: 50%;
+  }
+
+  .block {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    border-top: none;
+    display: block;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0px;
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: -0.5px;
+    color: #404850;
+    line-height: 44px;
+    margin-top: 15px;
+  }
+
+  .rightBlock {
+    padding-left: 0px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #86919c;
+    margin-top: 20px;
+  }
+
+  .cartBlock {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .contextCart,
+  .seoCart {
+    width: 345px;
+    padding: 20px;
+    height: 297px;
+    border: none;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+
+  .contextCart:hover,
+  .seoCart:hover {
+    border: none;
+    padding: none;
+  }
+
+  .contextCart {
+    background: #86919c;
+    display: block;
+  }
+
+  .upFloor {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .upFloor img {
+    display: none;
+  }
+
+  .cartTag {
+    max-width: 230px;
+    width: 100%;
+    font-family: "BebasNeue";
+    font-size: 35px;
+    letter-spacing: -0.35px;
+    line-height: 33px;
+    color: #ffffff;
+  }
+
+  .redDotWrapper img {
+    display: none;
+  }
+
+  .botFloor {
+    display: block;
+    font-family: "VelaSans";
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: #ffffff;
+    margin-top: 15px;
+  }
+
+  .botFloor img {
+    margin-right: 0px;
+    display: none;
+  }
+
+  .bottomContent {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .seoTagWidth {
+    width: 345px !important;
+  }
+
+  .botFloor img:hover {
+    cursor: pointer;
+  }
+
+  .imgCart {
+    display: flex;
+    gap: 14px;
+  }
+
+  .seoCart {
+    margin-top: 20px;
+    background: #404850;
+    display: block;
+  }
+
+  .rightCartBlock {
+    width: 345px;
+    height: 692px;
+    background: #fd4c38;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: none;
+  }
+
+  .auditTag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 33px;
+    letter-spacing: -0.35px;
+    color: #ffffff;
+    width: 158px;
+  }
+
+  .auditText {
+    font-family: "VelaSans";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+  }
+
+  .leftCartBlock,
+  .rightCartBlock {
+    flex-shrink: 0;
+  }
+
+  .inputs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+
+  .formInput {
+    padding-top: 23px;
+    padding-bottom: 23px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    width: 305px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 0px;
+    letter-spacing: -0.36px;
+    color: rgba(255, 255, 255, 0.89);
+  }
+
+  .confirmZone {
+    margin-top: 20px;
+    display: block;
+    justify-content: space-between;
+  }
+
+  .buttonZone {
+    width: 353px;
+    display: flex;
+  }
+
+  .checkBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .checkBox:hover {
+    cursor: pointer;
+  }
+
+  .conf {
+    margin-left: 10px;
+    font-family: "VelaSans";
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .confLink {
+    text-decoration: underline;
+  }
+
+  .conf a {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .confLink:hover {
+    cursor: pointer;
+  }
+
+  .massZone {
+    display: flex;
+    gap: 20px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 56px;
+    letter-spacing: -0.25px;
+  }
+
+  .massZone a {
+    height: 44px;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    border-bottom: 2px solid currentColor;
+  }
+
+  .textSite {
+    max-width: 375px;
+  }
+
+  .blockBox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    box-sizing: border-box;
+  }
+
+  .box {
+    width: 100%;
+    max-width: 345px;
+    height: 234px;
+    box-sizing: border-box;
+    background: rgba(242, 242, 242, 1);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .boxUp {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .upTag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 33px;
+    letter-spacing: -0.35px;
+    color: rgba(134, 145, 156, 1);
+  }
+
+  .boxBot {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(134, 145, 156, 1);
+  }
+
+  .boxUp img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .affButton {
+    border: none;
+    color: rgba(64, 72, 80, 1);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 8px;
+    max-width: 305px;
+    width: 100%;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0.56px;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 5px;
+    height: 70px;
+    box-sizing: border-box;
+  }
+
+  .inputs input {
+    color: rgba(255, 255, 255, 0.89);
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+  }
+
+  .formInput::placeholder {
+    color: rgba(255, 255, 255, 0.89);
+    border: none;
+    border-width: none;
+    border-color: none;
+  }
+
+  .affButton:hover {
+    background: rgba(242, 242, 242, 1);
+    cursor: pointer;
+  }
+
+  .formInput:focus {
+    outline: none;
+    box-shadow: none;
+    border: none; /* если нужно полностью убрать границу */
+  }
+
+  .leftPos {
+    display: flex;
+    gap: 0px;
+  }
+
+  .leftPos img {
+    margin-top: 0px;
+  }
+
+  .redDotWrapper {
+    display: none;
+  }
+
+  .contextCart:hover .redDotWrapper {
+    display: inline-block;
+  }
+
+  .seoCart:hover .redDotWrapper {
+    display: inline-block;
+  }
+
+  .formInputWrapper {
+    position: relative;
+  }
+
+  .smallArrow {
+    display: flex;
+    align-items: end;
+  }
+
+  .checkBox {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+  }
+
+  .checkBox.checked {
+    background-color: white;
+    position: relative;
+  }
+
+  .checkBox.checked::after {
+    content: "✓";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fd4c38;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .affButton img {
+    filter: brightness(0.25) saturate(0);
+    background: transparent; /* фон и так прозрачный у PNG */
+    position: relative;
+    width: 28px;
+    height: 16px;
+  }
+
+  .textButtontext {
+    position: relative;
+  }
+}

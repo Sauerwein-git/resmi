@@ -1,0 +1,373 @@
+.team {
+  padding: 80px 40px;
+  background: #ffffff;
+}
+
+.teamTag {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+}
+
+.tagBLock,
+.textBlock {
+  flex: 1;
+}
+
+.firstBlock {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  margin-top: 40px;
+  max-width: 1520px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1.67px solid rgba(134, 145, 156, 0.15);
+  padding-bottom: 0;
+}
+
+.tagBLock {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 130px;
+  max-width: 760px;
+  width: 100%;
+  box-sizing: border-box;
+  border-right: 1.67px solid rgba(134, 145, 156, 0.15);
+  margin: 0;
+  padding-top: 45px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 131px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.textBlock {
+  max-width: 760px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  margin: 0;
+  margin-bottom: 0;
+}
+
+.textNoInv {
+  display: block;
+  max-width: 620px;
+  width: 100%;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  margin: 0;
+  margin-left: 41px;
+}
+
+.black {
+  color: rgba(64, 72, 80, 1);
+}
+
+.invBlock {
+  display: none;
+}
+
+.textInv {
+  display: none;
+}
+
+.teamImage {
+  display: none;
+}
+
+.personal {
+  display: flex;
+  margin: 0;
+  margin-top: 96px;
+}
+
+.personalS {
+  display: flex;
+  margin: 0;
+  margin-top: 0px;
+}
+
+.personalBLock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 506px;
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.personalBLockS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 506px;
+  width: 100%;
+  padding-bottom: 32px;
+}
+
+.personalBLock:not(:first-child) {
+  border-left: 2.24px solid rgba(64, 68, 72, 0.1);
+}
+
+.name {
+  margin: 0;
+  margin-top: 54px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.mobBlocks {
+  display: none;
+}
+
+.job {
+  margin: 0;
+  text-align: center;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.invBlock {
+  display: none;
+}
+
+.take {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1080px) {
+  .tagBLock {
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .team {
+    padding: 40px 15px;
+    background: #ffffff;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 0px;
+    border-top: 2px solid #edeff0;
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid #edeff0;
+    height: 35px;
+    width: 50%;
+  }
+
+  .textNoInv {
+    display: none;
+  }
+
+  .textInv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin: 0;
+    padding: 0px;
+    color: rgba(134, 145, 156, 1);
+  }
+
+  .teamImage {
+    display: block;
+    max-width: 345px;
+    width: 100%;
+  }
+
+  .leftInvBlock {
+    border-right: 1.67px solid rgba(134, 145, 156, 0.15);
+  }
+
+  .teamTag {
+    max-width: 345px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "BebasNeue";
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 100%;
+    letter-spacing: 0.56px;
+    color: rgba(153, 165, 177, 1);
+  }
+
+  .tagBLock,
+  .textBlock {
+    flex: 1;
+  }
+
+  .firstBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 1520px;
+    width: 100%;
+    box-sizing: border-box;
+    border-top: none;
+    padding-bottom: 0;
+  }
+
+  .tagBLock {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 130px;
+    max-width: 760px;
+    width: 100%;
+    box-sizing: border-box;
+    border-right: none;
+    margin: 0;
+    padding-top: 20px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    color: rgba(64, 72, 80, 1);
+  }
+
+  .textBlock {
+    max-width: 760px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin: 0;
+    margin-bottom: 0;
+  }
+
+  .text {
+    max-width: 620px;
+    width: 100%;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -0.24px;
+    color: rgba(134, 145, 156, 1);
+    margin: 0;
+    margin-left: 41px;
+  }
+
+  .personal {
+    display: none;
+  }
+
+  .personalS {
+    display: none;
+  }
+
+  .mobBlocks {
+    position: relative;
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* Контейнер для горизонтальной прокрутки */
+  .scrollContainer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    content: red;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scrollContent {
+    display: flex;
+    gap: 30px;
+  }
+
+  .mobTree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .mobName {
+    margin-top: 20px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 22px;
+    letter-spacing: -0.24px;
+    color: rgba(64, 72, 80, 1);
+  }
+
+  .mobJob {
+    margin-top: 20px;
+    text-align: center;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: -0.18px;
+    color: rgba(134, 145, 156, 1);
+    margin-bottom: 40px;
+  }
+
+  .scrollIndicator {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: rgba(224, 228, 231, 1);
+  }
+
+  .scrollContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollBar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: red;
+  }
+}

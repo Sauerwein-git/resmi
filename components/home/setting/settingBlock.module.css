@@ -1,0 +1,248 @@
+.background {
+  background-color: rgba(64, 72, 80, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 132px;
+  letter-spacing: -3px;
+  max-width: 1294px;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+}
+
+.red {
+  color: rgba(253, 76, 56, 1);
+}
+
+.bottomBlock {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.white {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+}
+
+.book {
+  font-family: "VelaSans";
+  display: flex;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1.67px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1.67px solid rgba(255, 255, 255, 0.15);
+  max-width: 760px;
+  width: 100%;
+}
+
+.rightPage,
+.leftPage {
+  padding-top: 40px;
+  padding-bottom: 34px;
+  width: 50%;
+}
+
+.rightPage {
+  padding-left: 40px;
+}
+
+.wdT {
+  max-width: 328px;
+  width: 100%;
+}
+
+.leftPage {
+  border-right: 1.67px solid rgba(255, 255, 255, 0.15);
+  padding-right: 50px;
+}
+
+.miniTag {
+  margin-top: 46px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 58px;
+  letter-spacing: -0.6px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 493px;
+}
+
+.invBlock {
+  display: none;
+  margin-left: 15px;
+}
+
+.rightBlock img {
+  margin-bottom: -4px;
+}
+
+@media (max-width: 1580px) {
+  .bottomBlock {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .miniTag {
+    text-align: center;
+    align-items: center;
+  }
+
+  .leftBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 60px;
+    letter-spacing: -0.7px;
+    max-width: 345px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .red {
+    color: rgba(253, 76, 56, 1);
+  }
+
+  .bottomBlock {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+  }
+
+  .white {
+    color: rgba(255, 255, 255, 1);
+    font-weight: 600;
+  }
+
+  .book {
+    font-family: "VelaSans";
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: rgba(255, 255, 255, 0.8);
+    border-top: none;
+    border-bottom: 1.67px solid rgba(255, 255, 255, 0.15);
+    max-width: 760px;
+    width: 100%;
+  }
+
+  .rightPage,
+  .leftPage {
+    padding-top: 20px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .rightPage {
+    padding-left: 0px;
+    padding-bottom: 30px;
+  }
+
+  .wdT {
+    max-width: 328px;
+    width: 100%;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(85, 92, 99, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(85, 92, 99, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .leftPage {
+    border-right: none;
+    padding-right: 50px;
+    margin-top: 10px;
+  }
+
+  .miniTag {
+    margin-top: 46px;
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 41px;
+    letter-spacing: -0.4px;
+    color: rgba(255, 255, 255, 1);
+    max-width: 331px;
+  }
+
+  .miniTag {
+    text-align: left;
+  }
+
+  .leftBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .rightBlock img {
+    width: 345px;
+    height: 208px;
+    margin-bottom: -10px;
+  }
+}

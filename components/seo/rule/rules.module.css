@@ -1,0 +1,236 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding: 80px 40px;
+}
+
+.section {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  max-width: 930px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 94px;
+  letter-spacing: -2px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.button {
+  border: none;
+  box-sizing: border-box;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(255, 255, 255, 1);
+  max-width: 1520px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 60px;
+  gap: 5px;
+  width: 100%;
+}
+
+.button:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
+}
+
+.invBlock {
+  display: none;
+  margin-top: 40px;
+  border-top: 1px solid rgba(224, 228, 231, 1);
+}
+
+.box {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 1520px;
+  width: 100%;
+  border-top: 2px solid rgba(64, 72, 80, 0.1);
+  margin-top: 60px;
+}
+
+.left,
+.right {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.left {
+  border-right: 2px solid rgba(64, 72, 80, 0.1);
+}
+
+.right {
+  padding-left: 40px;
+}
+
+.boxTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.LboxText {
+  margin-top: 68px;
+}
+
+.RboxText {
+  margin-top: 40px;
+}
+
+.RboxText,
+.LboxText {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  max-width: 630px;
+}
+
+.boxText {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  margin-top: 30px;
+  max-width: 630px;
+}
+
+.arrow {
+  display: flex;
+  position: relative;
+  top: -3px;
+}
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: -0.5px;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .button {
+    width: 345px;
+    height: 70px;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    display: flex;
+    gap: 5px;
+  }
+
+  .arrow {
+    position: relative;
+    top: -3px;
+    font-weight: 600;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 40px;
+    border-top: 1px solid rgba(224, 228, 231, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 1px solid rgba(224, 228, 231, 1);
+    height: 35px;
+    width: 50%;
+    padding-bottom: 10px;
+  }
+
+  .box {
+    flex-direction: column;
+    margin-top: 30px;
+    border-top: none;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .left {
+    border-right: none;
+  }
+
+  .boxTag {
+    font-size: 40px;
+    line-height: 40px;
+    letter-spacing: -0.4px;
+  }
+
+  .LboxText {
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .RboxText {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin-top: 20px;
+  }
+
+  .boxText {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin-bottom: 30px;
+  }
+
+  .right {
+    padding-top: 30px;
+    padding-left: 0px;
+    border-top: 1px solid rgba(224, 228, 231, 1);
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}

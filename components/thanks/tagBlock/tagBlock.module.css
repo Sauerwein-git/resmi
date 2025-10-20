@@ -1,0 +1,382 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.botBox {
+  max-width: 1600px;
+  border-top: 1.67px solid rgba(134, 145, 156, 0.15);
+}
+
+.left {
+  border-right: 1.67px solid rgba(134, 145, 156, 0.15);
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.32px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.left,
+.right {
+  padding-top: 40px;
+  width: 50%;
+}
+
+.box {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 135px;
+  letter-spacing: -3px;
+  max-width: 800px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.textR {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.32px;
+  color: rgba(134, 145, 156, 1);
+  max-width: 358px;
+}
+
+.block {
+  max-width: 1560px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  border-top: 1px solid rgba(116, 116, 116, 1);
+}
+
+.rightBlock,
+.leftBlock {
+  width: 50%;
+  min-height: 326px;
+  padding-top: 40px;
+
+  box-sizing: border-box;
+}
+
+.leftBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightBlock {
+  padding-left: 40px;
+  border-left: 1px solid rgba(116, 116, 116, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.56px;
+  max-width: 553px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.back {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.56px;
+  color: rgba(134, 145, 156, 1);
+  display: flex;
+  gap: 5px;
+  margin-bottom: 60px;
+}
+
+.anchorBut {
+  font-weight: 700;
+  max-width: 720px;
+  min-height: 90px;
+  background: rgba(253, 76, 56, 1);
+  border-radius: 12px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: "BebasNeue";
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: -0.56px;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  gap: 5px;
+}
+
+.anchorBut:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
+}
+
+.imageBlock {
+  display: flex;
+  gap: 33px;
+}
+
+.mob {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+.back a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.num {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.2px;
+  color: rgba(64, 72, 80, 0.5);
+}
+
+.fleft {
+  display: flex;
+  gap: 80px;
+}
+
+.fTag {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  font-family: "BebasNeue";
+  color: rgba(64, 72, 80, 1);
+}
+
+.faq {
+  display: flex;
+  gap: 5px;
+}
+
+.faq a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (max-width: 950px) {
+  .mob {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .background {
+    background-color: rgba(242, 242, 242, 1);
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    box-sizing: border-box;
+  }
+
+  .section {
+    max-width: 375px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+    letter-spacing: -2.1px;
+    color: rgba(64, 72, 80, 1);
+    margin-top: 30px;
+  }
+
+  .block {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(116, 116, 116, 1);
+  }
+
+  .rightBlock,
+  .leftBlock {
+    width: 100%;
+    min-height: 326px;
+    padding-top: 40px;
+
+    box-sizing: border-box;
+  }
+
+  .leftBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .rightBlock {
+    padding-left: 0px;
+    border-left: 1px solid rgba(116, 116, 116, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .text {
+    font-family: "VelaSans";
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    max-width: 345px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .back {
+    font-family: "VelaSans";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: rgba(134, 145, 156, 1);
+    display: flex;
+    gap: 5px;
+  }
+
+  .anchorBut {
+    width: 345px;
+    min-height: 70px;
+    background: rgba(253, 76, 56, 1);
+    border-radius: 12px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "BebasNeue";
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: -0.56px;
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    gap: 5px;
+    margin-top: 40px;
+  }
+
+  .anchorBut:hover {
+    background: rgba(255, 97, 79, 1);
+    cursor: pointer;
+  }
+
+  .imageBlock {
+    display: flex;
+    gap: 18px;
+  }
+
+  .imageBlock img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .back {
+    margin-bottom: 0px;
+  }
+
+  .textR {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    max-width: 285px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .botBox {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    border-right: none;
+    padding-top: 20px;
+  }
+
+  .left {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
+
+  .fleft {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .num {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.18px;
+  }
+
+  .fTag {
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: -0.4px;
+    margin-bottom: 10px;
+  }
+}

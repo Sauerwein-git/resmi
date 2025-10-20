@@ -1,0 +1,383 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding-top: 40px;
+  padding-bottom: 80px;
+  padding-left: 39px;
+  padding-right: 29px;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 29px;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-size: 215.83px;
+  font-weight: 700;
+  line-height: 180.89px;
+  letter-spacing: -6.475px;
+  color: rgba(64, 72, 80, 1);
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.bt {
+  margin-top: 72px;
+  border-top: 2px solid rgba(64, 72, 80, 0.1);
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(64, 72, 80, 0.1);
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+}
+
+.wlb {
+  max-width: 586px;
+}
+
+.rightBlock {
+  display: flex;
+  gap: 10px;
+  margin-left: 40px;
+  padding-bottom: 40px;
+}
+
+.blr {
+  border-bottom: 2px solid rgba(64, 72, 80, 0.1);
+}
+
+.miniTag {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: -0.24px;
+  color: rgba(64, 72, 80, 1);
+  max-width: 266px;
+}
+
+.miniText {
+  margin-top: 23px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+  max-width: 490px;
+}
+
+.fourBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+
+.massTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 93%;
+  letter-spacing: -1.4px;
+  color: rgba(64, 72, 80, 1);
+}
+
+.massText {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  margin-top: 23px;
+  max-width: 310px;
+}
+
+.kov {
+  font-family: "VelaSans";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 35px;
+  letter-spacing: -0.8px;
+  color: rgba(253, 76, 56, 1);
+}
+
+.dfc {
+  display: flex;
+  flex-direction: column;
+}
+
+.secText,
+.thText {
+  max-width: 730px;
+  width: 100%;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.64px;
+  color: rgba(64, 72, 80, 1);
+  margin-top: 25px;
+}
+
+.invBlock {
+  display: none;
+  margin-top: 20px;
+  border-top: 2px solid rgba(149, 160, 171, 1);
+}
+
+.mob {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+@media (max-width: 1599px) {
+  .tag {
+    display: flex;
+    text-align: center;
+  }
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .t1,
+  .t2,
+  .t3,
+  .t4 {
+    margin-top: 40px;
+    align-items: flex-start;
+  }
+
+  .pcs {
+    display: none;
+  }
+
+  .mob {
+    display: block;
+  }
+
+  .section {
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .tag {
+    font-family: "BebasNeue";
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 62px;
+    letter-spacing: -0.7px;
+    color: rgba(64, 72, 80, 1);
+    display: flex;
+    text-align: left;
+  }
+
+  .block {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    display: block;
+  }
+
+  .bt {
+    margin-top: 20px;
+    border-top: none;
+  }
+
+  .leftBlock,
+  .rightBlock {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 0px;
+  }
+
+  .leftBlock {
+    border-right: none;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(134, 145, 156, 1);
+  }
+
+  .fourBlock:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  .wlb {
+    max-width: 586px;
+    border-bottom: none;
+  }
+
+  .rightBlock {
+    display: flex;
+    gap: 10px;
+    margin-left: 0px;
+    padding-bottom: 40px;
+  }
+
+  .leftRightBlock img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 20px;
+    border-top: 2px solid rgba(224, 228, 231, 1);
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(224, 228, 231, 1);
+    height: 35px;
+    width: 50%;
+  }
+
+  .blr {
+    border-bottom: 20px !important;
+    margin-top: 20px;
+  }
+
+  .mlrt {
+    border-bottom: 2px solid rgba(64, 72, 80, 0.1);
+    padding-bottom: 40px;
+  }
+
+  .m1 {
+    margin-left: 15px;
+  }
+
+  .m2 {
+    margin-left: 58px;
+  }
+
+  .m3 {
+    margin-left: 30px;
+  }
+
+  .miniTag {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: -0.24px;
+    color: rgba(64, 72, 80, 1);
+    max-width: 168px;
+  }
+
+  .red {
+    color: rgba(253, 76, 56, 1);
+  }
+
+  .miniText {
+    margin-top: 0px;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(134, 145, 156, 1);
+    max-width: 490px;
+  }
+
+  .mass {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .fourBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    border-bottom: 2px solid rgba(64, 72, 80, 0.1);
+    padding-bottom: 40px;
+  }
+
+  .kov {
+    margin-top: 40px;
+  }
+
+  .massTag {
+    font-family: "BebasNeue";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+    color: rgba(64, 72, 80, 1);
+  }
+
+  .massText {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    margin-top: 0px;
+    max-width: 231px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+  }
+
+  .kov {
+    font-family: "VelaSans";
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 35px;
+    letter-spacing: -0.8px;
+    color: rgba(253, 76, 56, 1);
+  }
+
+  .dfc {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .secText,
+  .thText {
+    max-width: 730px;
+    width: 100%;
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: -0.24px;
+    color: rgba(64, 72, 80, 1);
+    margin-top: 25px;
+  }
+}

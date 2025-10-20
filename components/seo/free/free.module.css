@@ -1,0 +1,344 @@
+.background {
+  background-color: rgba(64, 72, 80, 1);
+  padding-top: 80px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 80px;
+}
+
+.section {
+  max-width: 1540px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  border-top: 2.24px solid rgba(255, 255, 255, 0.1);
+}
+
+.left,
+.right {
+  box-sizing: border-box;
+  width: 50%;
+  padding-top: 40px;
+}
+
+.left {
+  border-right: 2.24px solid rgba(255, 255, 255, 0.1);
+}
+
+.right {
+  padding-left: 40px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.48px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.52px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.parts {
+  display: flex;
+  gap: 23px;
+  position: relative;
+}
+
+.num {
+  width: 60px;
+  height: 60px;
+  background: rgba(79, 87, 94, 1);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "VelaSans";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: -0.36px;
+  opacity: 1;
+  z-index: 2;
+}
+
+.line {
+  width: 2.24px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  left: 30px; /* центр круга — 60/2 = 30 */
+  top: 60px; /* начинаем под первым кругом */
+  z-index: 1;
+}
+
+.text {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: -0.48px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.parts:last-child .line {
+  display: none;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 91.53px;
+  line-height: 85.12px;
+  letter-spacing: -1.83px;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 101px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.input {
+  max-width: 719px;
+  height: 87px;
+  padding-left: 30px;
+  background: rgba(217, 217, 217, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: "VelaSans";
+  font-size: 24px;
+  line-height: 34px;
+  box-sizing: border-box;
+  letter-spacing: -0.48px;
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.input:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.checkbox {
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkbox.checked {
+  background: rgba(253, 76, 56, 1);
+  border-color: rgba(253, 76, 56, 1);
+}
+
+.checkbox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.label {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.submitButton {
+  max-width: 719px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 1);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.arrow {
+  position: relative;
+  top: -3px;
+  font-weight: 600;
+}
+
+.pc {
+  display: block;
+}
+
+.mob {
+  display: none;
+}
+
+.pol {
+  text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+  .background {
+    padding-top: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mob {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+
+  .smallTag {
+    font-size: 20px;
+    margin-bottom: 20px;
+    line-height: 100%;
+    letter-spacing: -0.4px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .tag {
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+  }
+
+  .smallText {
+    font-family: "VelaSans";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .input {
+    max-width: 346px;
+    height: 70px;
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: -0.36px;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .label {
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0px;
+  }
+
+  .agreement {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .submitButton {
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 0.4px;
+    max-width: 346px;
+    height: 70px;
+    margin-bottom: 40px;
+  }
+
+  .num {
+    width: 48px;
+    height: 48px;
+    font-size: 14.4px;
+    line-height: 24px;
+    letter-spacing: -0.288px;
+  }
+
+  .text {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+  }
+
+  .line {
+    width: 2.24px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    left: 21.5px; /* центр круга — 60/2 = 30 */
+    top: 40px; /* начинаем под первым кругом */
+    z-index: 1;
+  }
+
+  .arrow {
+    top: -2px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .invBlock {
+    display: block;
+    margin-top: 0px;
+    border-top: 2px solid rgba(85, 92, 99, 1);
+    margin-bottom: 20px;
+  }
+
+  .leftBlockInv {
+    border-right: 2px solid rgba(85, 92, 99, 1);
+    height: 35px;
+    width: 50%;
+  }
+}

@@ -1,42 +1,176 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 300;
+  src: url("/fonts/BebasNeue/BebasNeue-Thin.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue-Thin.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue-Thin.ttf") format("truetype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  src: url("/fonts/BebasNeue/BebasNeue-Regular.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue-Regular.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 500;
+  src: url("/fonts/BebasNeue/BebasNeue-Book.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue-Book.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue-Book.ttf") format("truetype");
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 600;
+  src: url("/fonts/BebasNeue/BebasNeue-Light.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue-Light.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue-Light.ttf") format("truetype");
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  src: url("/fonts/BebasNeue/BebasNeue-Bold.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue-Bold.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 200;
+  src: url("/fonts/VelaSans/VelaSans-ExtraLight.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-ExtraLight.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 300;
+  src: url("/fonts/VelaSans/VelaSans-Light.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-Light.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 400;
+  src: url("/fonts/VelaSans/VelaSans-Regular.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-Regular.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 500;
+  src: url("/fonts/VelaSans/VelaSans-Medium.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-Medium.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 600;
+  src: url("/fonts/VelaSans/VelaSans-SemiBold.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-SemiBold.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 700;
+  src: url("/fonts/VelaSans/VelaSans-Bold.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-Bold.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VelaSans";
+  font-weight: 800;
+  src: url("/fonts/VelaSans/VelaSans-ExtraBold.woff2") format("woff2"),
+    url("/fonts/VelaSans/VelaSans-ExtraBold.woff") format("woff"),
+    url("/fonts/VelaSans/VelaSans-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 800;
+  src: url("/fonts/Oswald/Oswald.woff2") format("woff2"),
+    url("/fonts/Oswald/Oswald.woff") format("woff"),
+    url("/fonts/Oswald/Oswald.ttf") format("truetype");
+}
+
+div {
+  margin: 0;
   padding: 0;
+}
+
+body {
   margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.arrow {
+  position: relative;
+  top: -3px;
+  font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.red {
+  color: rgba(253, 76, 56, 1);
+}
+
+.black {
+  color: rgba(64, 68, 72, 1);
+}
+
+.blackS {
+  color: rgba(64, 72, 80, 1);
+}
+
+.mob {
+  display: none;
+}
+
+.swiper-slide {
+  width: auto !important;
+  transition: none !important;
+}
+
+.invBlock {
+  display: none;
+}
+
+.pc {
+  display: block;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.white {
+  color: rgba(255, 255, 255, 1);
+}
+
+.white6 {
+  color: rgba(255, 255, 255, 1);
+  font-weight: 600;
+}
+
+@media (max-width: 950px) {
+  .mob {
+    display: block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  .arrow {
+    position: relative;
+    top: -2px;
+    font-weight: 600;
   }
 }
