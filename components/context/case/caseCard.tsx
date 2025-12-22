@@ -47,7 +47,10 @@ export const CaseCard: React.FC<CaseCardProps> = ({
         </div>
       </div>
       <div onClick={onClick} className={styles.readButton}>
-        читать полностью [ <span className="arrow">→</span> ]
+        <div className={styles.textRB}>читать полностью</div>
+        <div className={styles.imgRB}>
+          <Image src="/img/cartArrow.png" alt="arrow" width={35} height={20} />
+        </div>
       </div>
     </div>
   );

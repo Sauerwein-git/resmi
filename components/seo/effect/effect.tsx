@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import styles from "./effect.module.css";
 import Link from "next/link";
@@ -52,14 +54,13 @@ const steps = [
     num: "04",
     title: (
       <>
-        Оцениваем уникальность
-        <br /> контента, конверсии и<br /> юзабилити
+        Анализ стратегии и контента
+        <br /> конкурентов
       </>
     ),
     text: (
       <>
-        Анализ стратегии и контента
-        <br /> конкурентов, чтобы выделить и использовать выигрышные решения
+        Выделим сильные и слабые стороны, чтобы использовать выигрышные решения
       </>
     ),
   },
@@ -68,17 +69,54 @@ const steps = [
     title: (
       <>
         Прогноз трафика
-        <br /> и рекомендации{" "}
+        <br /> и рекомендации
       </>
     ),
-    text: (
-      <>
-        Выделим зоны роста и сформируем стратегию по достижению
-        <br /> плановых показателей
-      </>
-    ),
+    text: <>Сформируем стратегию роста и план достижения целевых показателей</>,
   },
 ];
+
+// === Функция форматирования телефона (как в ModalForm) ===
+const formatPhoneForDisplay = (digits: string) => {
+  if (digits.startsWith("8")) {
+    const parts = [
+      digits.slice(0, 1),
+      digits.slice(1, 4),
+      digits.slice(4, 7),
+      digits.slice(7, 9),
+      digits.slice(9, 11),
+    ].filter(Boolean);
+    return parts.join("-");
+  }
+
+  if (digits.startsWith("7") || digits.startsWith("9")) {
+    let res = "+7";
+    const p1 = digits.slice(
+      digits.startsWith("9") ? 0 : 1,
+      digits.startsWith("9") ? 3 : 4
+    );
+    const p2 = digits.slice(
+      digits.startsWith("9") ? 3 : 4,
+      digits.startsWith("9") ? 6 : 7
+    );
+    const p3 = digits.slice(
+      digits.startsWith("9") ? 6 : 7,
+      digits.startsWith("9") ? 8 : 9
+    );
+    const p4 = digits.slice(
+      digits.startsWith("9") ? 8 : 9,
+      digits.startsWith("9") ? 10 : 11
+    );
+
+    if (p1) res += `(${p1}`;
+    if (p2) res += `)-${p2}`;
+    if (p3) res += `-${p3}`;
+    if (p4) res += `-${p4}`;
+    return res;
+  }
+
+  return digits;
+};
 
 export default function Effect() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -94,8 +132,13 @@ export default function Effect() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name.trim() || !phone.trim()) {
-      alert("Пожалуйста, заполните все поля.");
+    if (!name.trim()) {
+      alert("Пожалуйста, укажите имя.");
+      return;
+    }
+
+    if (phone.length < 11) {
+      alert("Номер телефона должен содержать 11 цифр.");
       return;
     }
 
@@ -107,7 +150,7 @@ export default function Effect() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mvgkjbjb", {
+      const response = await fetch("https://research-it.ru/api/send-form.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,13 +158,16 @@ export default function Effect() {
         body: JSON.stringify({ name, phone }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
+        // Очистка полей после отправки (опционально)
         setName("");
         setPhone("");
         setIsAgreed(false);
         router.push("/thanks");
       } else {
-        alert("Ошибка отправки. Попробуйте позже.");
+        alert(`Ошибка отправки: ${data.error || "Неизвестная ошибка"}`);
       }
     } catch (err) {
       console.error(err);
@@ -133,6 +179,7 @@ export default function Effect() {
 
   return (
     <>
+      {/* Desktop */}
       <div className={`${styles.background} ${styles.pc}`}>
         <div className={styles.section}>
           <div className={styles.miniTag}>Этапы работы</div>
@@ -155,6 +202,7 @@ export default function Effect() {
               </div>
             ))}
 
+            {/* Форма */}
             <form onSubmit={handleSubmit} className={styles.auditForm}>
               <div className={styles.formTag}>Получить бесплатный аудит</div>
               <div className={styles.inputs}>
@@ -169,8 +217,20 @@ export default function Effect() {
                 <input
                   type="tel"
                   placeholder="Номер телефона"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  value={formatPhoneForDisplay(phone)}
+                  onChange={(e) => {
+                    const input = e.target.value;
+                    const digits = input.replace(/\D/g, "");
+                    if (digits === "") {
+                      setPhone("");
+                    } else if (digits.length === 1) {
+                      if (["7", "8", "9"].includes(digits)) {
+                        setPhone(digits);
+                      }
+                    } else if (digits.length <= 11) {
+                      setPhone(digits);
+                    }
+                  }}
                   className={styles.number}
                   required
                 />
@@ -182,7 +242,7 @@ export default function Effect() {
                 ></div>
                 <div className={styles.polit}>
                   Я принимаю условия{" "}
-                  <Link href="/context">политики конфиденциальности</Link>
+                  <Link href="/politica">политики конфиденциальности</Link>
                 </div>
               </div>
               <button
@@ -205,6 +265,7 @@ export default function Effect() {
         </div>
       </div>
 
+      {/* Mobile */}
       <div className={`${styles.background} ${styles.mob}`}>
         <div className={styles.section}>
           <div className={styles.etap}>Этапы работы</div>
@@ -242,6 +303,7 @@ export default function Effect() {
             </div>
           </div>
 
+          {/* Форма (мобилка) */}
           <form onSubmit={handleSubmit} className={styles.auditForm}>
             <div className={styles.formTag}>Получить бесплатный аудит</div>
             <div className={styles.inputs}>
@@ -256,8 +318,20 @@ export default function Effect() {
               <input
                 type="tel"
                 placeholder="Номер телефона"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={formatPhoneForDisplay(phone)}
+                onChange={(e) => {
+                  const input = e.target.value;
+                  const digits = input.replace(/\D/g, "");
+                  if (digits === "") {
+                    setPhone("");
+                  } else if (digits.length === 1) {
+                    if (["7", "8", "9"].includes(digits)) {
+                      setPhone(digits);
+                    }
+                  } else if (digits.length <= 11) {
+                    setPhone(digits);
+                  }
+                }}
                 className={styles.number}
                 required
               />
@@ -269,7 +343,7 @@ export default function Effect() {
               ></div>
               <div className={styles.polit}>
                 Я принимаю условия <br />
-                <Link href="/context">политики конфиденциальности</Link>
+                <Link href="/politica">политики конфиденциальности</Link>
               </div>
             </div>
             <button

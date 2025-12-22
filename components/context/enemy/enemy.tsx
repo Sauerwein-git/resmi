@@ -63,8 +63,13 @@ export default function Enemy() {
             </div>
           </div>
           <button type="button" className={styles.button} onClick={openModal}>
-            Начать с бесплатного аудита [<span className={styles.arrow}>→</span>
-            ]
+            Начать с бесплатного аудита{" "}
+            <Image
+              src="/img/cartArrow.png"
+              alt="arrow"
+              width={40}
+              height={20}
+            />
           </button>
         </div>
       </div>

@@ -1,42 +1,68 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import styles from "./tagBlock.module.css";
 import ModalForm from "../../ModalForm/ModalForm";
 
 export default function TagBlock() {
-  const [scrollY, setScrollY] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [fontSize, setFontSize] = useState(420);
+  const [maxWidth, setMaxWidth] = useState(1546);
+  const tagRef = useRef<HTMLDivElement>(null);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    let rafId: number;
 
-  const maxScroll = 300;
-  const minScale = 0.4;
-  const scale = Math.max(
-    minScale,
-    1 - (scrollY / maxScroll) * (1.5 - minScale)
-  );
+    const handleScroll = () => {
+      rafId = requestAnimationFrame(() => {
+        const el = tagRef.current;
+        if (!el) return;
+
+        const rect = el.getBoundingClientRect();
+        const vh = window.innerHeight;
+        const visibleFromTop = vh - rect.top;
+        const progress = Math.max(
+          0,
+          Math.min(1, 1 - visibleFromTop / rect.height)
+        );
+
+        // fontSize: от 420 до 62.77
+        setFontSize(420 - progress * (420 - 62.77));
+
+        // maxWidth: от 1546 до 1520 при progress >= 0.5
+        const targetMaxWidth = progress < 0.5 ? 1546 : 1520;
+        setMaxWidth(targetMaxWidth);
+      });
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <div className={`${styles.background} ${styles.pc}`}>
         <div className={styles.section}>
           <div
+            ref={tagRef}
             className={styles.tag}
             style={{
-              transform: `scale(${scale})`,
-              transformOrigin: "left bottom",
-              transition: "transform 0.1s ease-out",
-              willChange: "transform",
+              fontSize: `${fontSize}px`,
+              lineHeight: 0.836,
+              maxWidth: `${maxWidth}px`,
+              transition:
+                "font-size 0.12s cubic-bezier(0.2,0,0.2,1), max-width 0.12s cubic-bezier(0.2,0,0.2,1)",
             }}
+            suppressHydrationWarning
           >
             RE SEARCH IT
           </div>
@@ -89,8 +115,9 @@ export default function TagBlock() {
                 <Image
                   src="/img/cartArrow.png"
                   alt="arrow"
-                  width={45}
-                  height={23}
+                  width={40}
+                  height={20}
+                  style={{ marginLeft: "5px" }}
                 />
               </button>
             </div>
@@ -123,8 +150,8 @@ export default function TagBlock() {
             <Image
               src="/img/cartArrow.png"
               alt="arrow"
-              width={25}
-              height={30}
+              width={75}
+              height={70}
             />
           </button>
         </div>
@@ -160,7 +187,9 @@ export default function TagBlock() {
                 color: "white",
                 cursor: "pointer",
               }}
-            ></button>
+            >
+              ×
+            </button>
             <ModalForm onClose={closeModal} />
           </div>
         </div>

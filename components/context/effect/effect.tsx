@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./effect.module.css";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
-// Данные для шагов
 const steps = [
   {
     num: "01",
@@ -38,18 +38,47 @@ export default function Effect() {
   const [activeIndex, setActiveIndex] = useState(0);
   const totalSlides = steps.length;
 
-  // === Состояния формы ===
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [isAgreed, setIsAgreed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
+  const formatPhoneForDisplay = (digits: string): string => {
+    if (digits.startsWith("8")) {
+      const parts = [
+        digits.slice(0, 1),
+        digits.slice(1, 4),
+        digits.slice(4, 7),
+        digits.slice(7, 9),
+        digits.slice(9, 11),
+      ].filter(Boolean);
+      return parts.join("-");
+    }
+
+    if (digits.startsWith("7") || digits.startsWith("9")) {
+      let res = "+7";
+      const start = digits.startsWith("9") ? 0 : 1;
+      const p1 = digits.slice(start, start + 3);
+      const p2 = digits.slice(start + 3, start + 6);
+      const p3 = digits.slice(start + 6, start + 8);
+      const p4 = digits.slice(start + 8, start + 10);
+
+      if (p1) res += `(${p1}`;
+      if (p2) res += `)-${p2}`;
+      if (p3) res += `-${p3}`;
+      if (p4) res += `-${p4}`;
+      return res;
+    }
+
+    return digits;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name.trim() || !phone.trim()) {
-      alert("Пожалуйста, заполните все поля.");
+    if (!name.trim() || phone.length < 11) {
+      alert("Пожалуйста, заполните все поля корректно.");
       return;
     }
 
@@ -119,8 +148,21 @@ export default function Effect() {
                 <input
                   type="tel"
                   placeholder="Номер телефона"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  value={formatPhoneForDisplay(phone)}
+                  onChange={(e) => {
+                    const input = e.target.value;
+                    const digits = input.replace(/\D/g, "");
+
+                    if (digits === "") {
+                      setPhone("");
+                    } else if (digits.length === 1) {
+                      if (digits === "7" || digits === "8" || digits === "9") {
+                        setPhone(digits);
+                      }
+                    } else if (digits.length <= 11) {
+                      setPhone(digits);
+                    }
+                  }}
                   className={styles.number}
                   required
                 />
@@ -146,7 +188,13 @@ export default function Effect() {
                   "Отправка..."
                 ) : (
                   <>
-                    Оставить заявку [<span className="arrow">→</span>]
+                    Оставить заявку{" "}
+                    <Image
+                      src="/img/cartArrow.png"
+                      alt="arrow"
+                      width={40}
+                      height={20}
+                    />
                   </>
                 )}
               </button>
@@ -204,8 +252,21 @@ export default function Effect() {
               <input
                 type="tel"
                 placeholder="Номер телефона"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={formatPhoneForDisplay(phone)}
+                onChange={(e) => {
+                  const input = e.target.value;
+                  const digits = input.replace(/\D/g, "");
+
+                  if (digits === "") {
+                    setPhone("");
+                  } else if (digits.length === 1) {
+                    if (digits === "7" || digits === "8" || digits === "9") {
+                      setPhone(digits);
+                    }
+                  } else if (digits.length <= 11) {
+                    setPhone(digits);
+                  }
+                }}
                 className={styles.number}
                 required
               />
@@ -231,7 +292,13 @@ export default function Effect() {
                 "Отправка..."
               ) : (
                 <>
-                  Оставить заявку [<span className="arrow">→</span>]
+                  Оставить заявку{" "}
+                  <Image
+                    src="/img/cartArrow.png"
+                    alt="arrow"
+                    width={36}
+                    height={20}
+                  />
                 </>
               )}
             </button>

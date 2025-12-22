@@ -18,9 +18,9 @@ export default function Agency() {
           <div className={styles.block}>
             <div className={styles.leftBlock}>
               <div className={styles.wT}>
-                Никто из агентств, с которыми я работал, не задавал мне вопросов
-                о развитии моего бизнеса, о моих ожиданиях или о том, какие
-                обороты и прибыль я хочу получить
+                Никто из агентств, с которыми я работал, <br className="pc" />
+                не задавал мне вопросов о развитии моего бизнеса, о моих
+                ожиданиях или о том, какие обороты и прибыль я хочу получить
               </div>
             </div>
             <div className={styles.invBlock}>

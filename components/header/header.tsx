@@ -44,65 +44,72 @@ const DynamicHeader = () => {
           isHeadStickyVisible ? styles.visible : ""
         }`}
       >
-        <div className={styles.flex}>
-          <div className={styles.flexss}>
-            <div className={styles.leftBlock}>
-              <Link href="/">
-                <div className={styles.Tag}>RE SEARCH IT</div>
-                <div className={styles.description}>rock your business</div>
-              </Link>
-            </div>
-            <div className={styles.mediumBlock}>
-              <div className={styles.borderMediumBlock}>
-                <div className={styles.textMediumBlock}>
-                  Ваш партнер в digital-маркетинге.
-                  <br />
-                  Повышаем продажи и прибыль в вашем бизнесе
+        <div className={styles.underFlex}>
+          <div className={styles.flex}>
+            <div className={styles.flexss}>
+              <div className={styles.leftBlock}>
+                <Link href="/">
+                  <div className={styles.Tag}>RE SEARCH IT</div>
+                  <div className={styles.description}>rock your business</div>
+                </Link>
+              </div>
+              <div className={styles.mediumBlock}>
+                <div className={styles.borderMediumBlock}>
+                  <div className={styles.textMediumBlock}>
+                    Ваш партнер в digital-маркетинге.
+                    <br />
+                    Повышаем продажи и прибыль в вашем бизнесе
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className={styles.rightBLock}>
-            <button className={styles.menu} onClick={toggleMenu}>
-              МЕНЮ&nbsp;&nbsp;
-              <span className={styles.ravno}>
-                {isModalOpen ? (
-                  <img
-                    src="/img/krest.png"
-                    alt="Закрыть"
-                    width={20}
-                    height={19}
-                  />
-                ) : (
-                  <img src="/img/rav.png" alt="Открыть" width={30} height={5} />
-                )}
-              </span>
-            </button>
+            <div className={styles.rightBLock}>
+              <button className={styles.menu} onClick={toggleMenu}>
+                МЕНЮ&nbsp;&nbsp;
+                <span className={styles.ravno}>
+                  {isModalOpen ? (
+                    <img
+                      src="/img/krest.png"
+                      alt="Закрыть"
+                      width={20}
+                      height={19}
+                    />
+                  ) : (
+                    <img
+                      src="/img/rav.png"
+                      alt="Открыть"
+                      width={30}
+                      height={5}
+                    />
+                  )}
+                </span>
+              </button>
 
-            <button
-              type="button"
-              className={styles.report}
-              onClick={openAuditModal}
-            >
-              <div className={styles.reportContent}>
-                <span className={styles.notry}>
-                  <img
-                    src="/img/smallzayavka.png"
-                    alt="arrow"
-                    width={86}
-                    height={14}
-                  />
-                </span>
-                <span className={styles.try}>
-                  <img
-                    src="/img/zayavka.png"
-                    alt="arrow"
-                    width={190}
-                    height={17}
-                  />
-                </span>
-              </div>
-            </button>
+              <button
+                type="button"
+                className={styles.report}
+                onClick={openAuditModal}
+              >
+                <div className={styles.reportContent}>
+                  <span className={styles.notry}>
+                    <img
+                      src="/img/smallzayavka.png"
+                      alt="arrow"
+                      width={86}
+                      height={14}
+                    />
+                  </span>
+                  <span className={styles.try}>
+                    <img
+                      src="/img/zayavka.png"
+                      alt="arrow"
+                      width={190}
+                      height={17}
+                    />
+                  </span>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -169,20 +176,28 @@ const DynamicHeader = () => {
                 </div>
                 <div className={styles.modalColumn}>
                   <div className={styles.underMovalColumn}>
-                    <div className={styles.modalTitle}>
+                    <div
+                      className={styles.modalTitle}
+                      style={{ maxWidth: "460px" }}
+                    >
                       <Link href="/about">О нас</Link>
+                      <Link href="/blog">Блог</Link>
                     </div>
-                    <div className={styles.modalTitle}>
+                    <div className={`${styles.modalTitle} ${styles.TitleFlex}`}>
                       Наши клиенты заработали
                       <br />
-                      <span className={styles.red}>более 1 368 000 000 ₽</span>
+                      <span className={styles.red}>
+                        более 1 368 000 000 <span className="rub">₽</span>
+                      </span>
                     </div>
                     <ul className={styles.modalList}>
                       <li>
-                        <span className={styles.modalRedText}>
-                          Смотреть все кейсы [&nbsp;
-                          <span className={styles.arrowEl}>→</span>&nbsp;]
-                        </span>
+                        <Link href="/case">
+                          <span className={styles.modalRedText}>
+                            Смотреть все кейсы [&nbsp;
+                            <span className={styles.arrowEl}>→</span>&nbsp;]
+                          </span>
+                        </Link>
                       </li>
                     </ul>
                   </div>

@@ -145,6 +145,12 @@
   border-radius: 12px;
   margin-top: 60px;
   border: none;
+  gap: 5px;
+}
+
+.button img {
+  position: relative;
+  top: -2px;
 }
 
 .button:hover {

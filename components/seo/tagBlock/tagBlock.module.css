@@ -2,8 +2,6 @@
   background-color: #404850;
   padding-top: 30px;
   padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
   padding-left: 20px;
   padding-right: 40px;
 }
@@ -14,6 +12,43 @@
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
+}
+
+.button {
+  border: none;
+  background: rgba(253, 76, 56, 1);
+  border-radius: 8px;
+  max-width: 720px;
+  width: 100%;
+  color: rgba(255, 255, 255, 1);
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%px;
+  letter-spacing: 0.56px;
+  margin-top: 55px;
+  display: flex;
+  height: 90px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.button img {
+  position: relative;
+  top: -1px;
+}
+
+.textButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.button:hover {
+  background: rgba(255, 97, 79, 1);
+  cursor: pointer;
 }
 
 .tag {

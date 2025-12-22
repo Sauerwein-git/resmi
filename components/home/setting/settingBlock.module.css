@@ -1,8 +1,6 @@
 .background {
   background-color: rgba(64, 72, 80, 1);
   padding-top: 80px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 .section {
@@ -84,6 +82,7 @@
   letter-spacing: -0.6px;
   color: rgba(255, 255, 255, 1);
   max-width: 493px;
+  margin-bottom: 40px;
 }
 
 .invBlock {
@@ -91,32 +90,15 @@
   margin-left: 15px;
 }
 
-.rightBlock img {
-  margin-bottom: -4px;
+.leftBlock,
+.rightBlock {
+  width: 50%;
 }
 
-@media (max-width: 1580px) {
-  .bottomBlock {
-    margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-  }
-
-  .miniTag {
-    text-align: center;
-    align-items: center;
-  }
-
-  .leftBlock {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-  }
+.rightBlock {
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 @media (max-width: 950px) {

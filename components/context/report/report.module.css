@@ -138,6 +138,12 @@
   border: none;
 }
 
+.button img {
+  filter: brightness(0.25) saturate(0);
+  position: relative;
+  top: -2px;
+}
+
 .button:hover {
   background: rgba(242, 242, 242, 1);
 }

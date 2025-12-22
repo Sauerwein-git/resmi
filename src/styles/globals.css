@@ -1,7 +1,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-weight: 300;
-  src: url("/fonts/BebasNeue/BebasNeue-Thin.woff2") format("woff2"),
+  src:
+    url("/fonts/BebasNeue/BebasNeue-Thin.woff2") format("woff2"),
     url("/fonts/BebasNeue/BebasNeue-Thin.woff") format("woff"),
     url("/fonts/BebasNeue/BebasNeue-Thin.ttf") format("truetype");
 }
@@ -9,7 +10,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-weight: 400;
-  src: url("/fonts/BebasNeue/BebasNeue-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/BebasNeue/BebasNeue-Regular.woff2") format("woff2"),
     url("/fonts/BebasNeue/BebasNeue-Regular.woff") format("woff"),
     url("/fonts/BebasNeue/BebasNeue-Regular.ttf") format("truetype");
 }
@@ -17,7 +19,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-weight: 500;
-  src: url("/fonts/BebasNeue/BebasNeue-Book.woff2") format("woff2"),
+  src:
+    url("/fonts/BebasNeue/BebasNeue-Book.woff2") format("woff2"),
     url("/fonts/BebasNeue/BebasNeue-Book.woff") format("woff"),
     url("/fonts/BebasNeue/BebasNeue-Book.ttf") format("truetype");
 }
@@ -25,7 +28,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-weight: 600;
-  src: url("/fonts/BebasNeue/BebasNeue-Light.woff2") format("woff2"),
+  src:
+    url("/fonts/BebasNeue/BebasNeue-Light.woff2") format("woff2"),
     url("/fonts/BebasNeue/BebasNeue-Light.woff") format("woff"),
     url("/fonts/BebasNeue/BebasNeue-Light.ttf") format("truetype");
 }
@@ -33,7 +37,8 @@
 @font-face {
   font-family: "BebasNeue";
   font-weight: 700;
-  src: url("/fonts/BebasNeue/BebasNeue-Bold.woff2") format("woff2"),
+  src:
+    url("/fonts/BebasNeue/BebasNeue-Bold.woff2") format("woff2"),
     url("/fonts/BebasNeue/BebasNeue-Bold.woff") format("woff"),
     url("/fonts/BebasNeue/BebasNeue-Bold.ttf") format("truetype");
 }
@@ -41,7 +46,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 200;
-  src: url("/fonts/VelaSans/VelaSans-ExtraLight.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-ExtraLight.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-ExtraLight.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-ExtraLight.ttf") format("truetype");
 }
@@ -49,7 +55,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 300;
-  src: url("/fonts/VelaSans/VelaSans-Light.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-Light.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-Light.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-Light.ttf") format("truetype");
 }
@@ -57,7 +64,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 400;
-  src: url("/fonts/VelaSans/VelaSans-Regular.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-Regular.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-Regular.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-Regular.ttf") format("truetype");
 }
@@ -65,7 +73,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 500;
-  src: url("/fonts/VelaSans/VelaSans-Medium.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-Medium.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-Medium.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-Medium.ttf") format("truetype");
 }
@@ -73,7 +82,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 600;
-  src: url("/fonts/VelaSans/VelaSans-SemiBold.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-SemiBold.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-SemiBold.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-SemiBold.ttf") format("truetype");
 }
@@ -81,7 +91,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 700;
-  src: url("/fonts/VelaSans/VelaSans-Bold.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-Bold.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-Bold.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-Bold.ttf") format("truetype");
 }
@@ -89,7 +100,8 @@
 @font-face {
   font-family: "VelaSans";
   font-weight: 800;
-  src: url("/fonts/VelaSans/VelaSans-ExtraBold.woff2") format("woff2"),
+  src:
+    url("/fonts/VelaSans/VelaSans-ExtraBold.woff2") format("woff2"),
     url("/fonts/VelaSans/VelaSans-ExtraBold.woff") format("woff"),
     url("/fonts/VelaSans/VelaSans-ExtraBold.ttf") format("truetype");
 }
@@ -97,9 +109,20 @@
 @font-face {
   font-family: "Oswald";
   font-weight: 800;
-  src: url("/fonts/Oswald/Oswald.woff2") format("woff2"),
+  src:
+    url("/fonts/Oswald/Oswald.woff2") format("woff2"),
     url("/fonts/Oswald/Oswald.woff") format("woff"),
     url("/fonts/Oswald/Oswald.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 600;
+  src: url("/fonts/Oswald/Oswald-Medium.woff2") format("woff2");
+}
+
+.rub {
+  font-family: "Oswald";
 }
 
 div {
@@ -172,5 +195,48 @@ body {
     position: relative;
     top: -2px;
     font-weight: 600;
+  }
+}
+
+@media (max-width: 1600px) {
+  html {
+    zoom: 0.9;
+  }
+}
+
+@media (max-width: 1500px) {
+  html {
+    zoom: 0.81;
+  }
+}
+
+/* Fallback для браузеров без поддержки zoom (например, Firefox) */
+@supports not (zoom: 0.9) {
+  @media (max-width: 1600px) {
+    .zoom-fallback-wrapper {
+      transform: scale(0.9);
+      transform-origin: top left;
+      width: 111.111%; /* 100 / 0.9 */
+      display: block;
+    }
+
+    .zoom-fallback-wrapper,
+    .zoom-fallback-wrapper * {
+      font-size: calc(1em / 0.9);
+    }
+  }
+
+  @media (max-width: 1500px) {
+    .zoom-fallback-wrapper {
+      transform: scale(0.81);
+      transform-origin: top left;
+      width: 123.4568%; /* 100 / 0.81 ≈ 123.4568 */
+      display: block;
+    }
+
+    .zoom-fallback-wrapper,
+    .zoom-fallback-wrapper * {
+      font-size: calc(1em / 0.81);
+    }
   }
 }

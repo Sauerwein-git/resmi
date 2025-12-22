@@ -62,7 +62,8 @@
 .partnerSwiper {
   margin-top: 75px;
   overflow: hidden;
-  padding: 0 20px;
+  padding: 0 0px;
+  margin-left: 20px;
 }
 
 .swiperSlide {
@@ -87,6 +88,15 @@
 
 .indicatorContainer {
   display: none;
+}
+
+@media (max-width: 1610px) {
+  .partnerSwiper {
+    margin-top: 75px;
+    overflow: hidden;
+    padding: 0 0px;
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 950px) {

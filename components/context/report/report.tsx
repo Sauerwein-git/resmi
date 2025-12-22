@@ -69,8 +69,13 @@ export default function Report() {
                 className={styles.button}
                 onClick={openModal}
               >
-                Начать с бесплатного аудита [&nbsp;
-                <span className={styles.arrow}>→</span>&nbsp;]
+                Начать с бесплатного аудита{" "}
+                <Image
+                  src="/img/cartArrow.png"
+                  alt="arrow"
+                  width={40}
+                  height={20}
+                />
               </button>
             </div>
           </div>

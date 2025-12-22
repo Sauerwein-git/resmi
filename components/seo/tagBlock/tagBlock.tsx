@@ -56,10 +56,19 @@ export default function TagBlock() {
               </div>
               <button
                 type="button"
-                className={styles.anchorBut}
+                className={styles.button}
                 onClick={openModal}
               >
-                Начать с бесплатного аудита [<span className="arrow">→</span>]
+                <div className={styles.textButton}>
+                  Начать с бесплатного аудита
+                </div>
+                <Image
+                  src="/img/cartArrow.png"
+                  alt="arrow"
+                  width={40}
+                  height={20}
+                  style={{ marginLeft: "5px" }}
+                />
               </button>
             </div>
           </div>

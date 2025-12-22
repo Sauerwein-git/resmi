@@ -23,12 +23,13 @@ export default function TraficBlock() {
       return parts.join("-");
     }
 
-    if (digits.startsWith("7")) {
+    if (digits.startsWith("7") || digits.startsWith("9")) {
       let res = "+7";
-      const p1 = digits.slice(1, 4);
-      const p2 = digits.slice(4, 7);
-      const p3 = digits.slice(7, 9);
-      const p4 = digits.slice(9, 11);
+      const start = digits.startsWith("9") ? 0 : 1;
+      const p1 = digits.slice(start, start + 3);
+      const p2 = digits.slice(start + 3, start + 6);
+      const p3 = digits.slice(start + 6, start + 8);
+      const p4 = digits.slice(start + 8, start + 10);
 
       if (p1) res += `(${p1}`;
       if (p2) res += `)-${p2}`;
@@ -56,7 +57,7 @@ export default function TraficBlock() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://formspree.io/f/mvgkjbjb", {
+      const response = await fetch("https://research-it.ru/api/send-form.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -64,13 +65,15 @@ export default function TraficBlock() {
         body: JSON.stringify({ name, phone }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
         setName("");
         setPhone("");
         setIsAgreed(false);
         router.push("/thanks");
       } else {
-        alert("Ошибка отправки. Попробуйте позже.");
+        alert(`Ошибка: ${data.error || "Неизвестная ошибка"}`);
       }
     } catch (err) {
       console.error(err);
@@ -98,125 +101,131 @@ export default function TraficBlock() {
           </div>
           <div className={styles.cartBlock}>
             <div className={styles.leftCartBlock}>
-              <div className={styles.contextCart}>
-                <div className={styles.upFloor}>
-                  <div className={styles.leftPos}>
-                    <span className={styles.redDotWrapper}>
-                      <Image
-                        src="/img/redDot.png"
-                        alt="dot"
-                        width={16.68}
-                        height={16.68}
-                      />
-                    </span>
-                    <div className={styles.cartTag}>
-                      Контекстная реклама в Я.Директ{" "}
+              <Link href="/context">
+                <div className={styles.contextCart}>
+                  <div className={styles.upFloor}>
+                    <div className={styles.leftPos}>
+                      <span className={styles.redDotWrapper}>
+                        <Image
+                          src="/img/redDot.png"
+                          alt="dot"
+                          width={16.68}
+                          height={16.68}
+                        />
+                      </span>
+                      <div className={styles.cartTag}>
+                        Контекстная реклама в Я.Директ{" "}
+                      </div>
                     </div>
-                  </div>
-                  <Image
-                    src="/img/yandexDirect.png"
-                    alt="yandex"
-                    width={70}
-                    height={70}
-                  />
-                </div>
-                <div className={styles.botFloor}>
-                  <div className={styles.contextText}>
-                    Выстроим стратегию и полностью заберем ответственность за
-                    канал трафика
-                  </div>
-                  <Image
-                    src="/img/cartArrow.png"
-                    alt="arrow"
-                    width={37.65}
-                    height={18.2}
-                  />
-                </div>
-                <div className={`${styles.mob} ${styles.bottomContent}`}>
-                  <Image
-                    src="/img/yandexDirect.png"
-                    alt="yandex"
-                    width={48}
-                    height={48}
-                  />
-                  <div className={styles.smallArrow}>
                     <Image
-                      src="/img/cartArrow.png"
-                      alt="arrow"
-                      width={30.12}
-                      height={14.56}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className={styles.seoCart}>
-                <div className={styles.upFloor}>
-                  <div className={styles.leftPos}>
-                    <span className={styles.redDotWrapper}>
-                      <Image
-                        src="/img/redDot.png"
-                        alt="dot"
-                        width={16.68}
-                        height={16.68}
-                      />
-                    </span>
-                    <div className={`${styles.cartTag} ${styles.seoTagWidth}`}>
-                      SEO-продвижение
-                      <br className={styles.mob} /> в Яндекс и Google
-                    </div>
-                  </div>
-                  <div className={styles.imgCart}>
-                    <Image
-                      src="/img/yandex.png"
+                      src="/img/yandexDirect.png"
                       alt="yandex"
                       width={70}
                       height={70}
                     />
+                  </div>
+                  <div className={styles.botFloor}>
+                    <div className={styles.contextText}>
+                      Выстроим стратегию и полностью заберем ответственность за
+                      канал трафика
+                    </div>
                     <Image
-                      src="/img/google.png"
-                      alt="google"
-                      width={70}
-                      height={70}
+                      src="/img/cartArrow.png"
+                      alt="arrow"
+                      width={37.65}
+                      height={18.2}
                     />
                   </div>
-                </div>
-                <div className={styles.botFloor}>
-                  <div className={styles.contextText}>
-                    Выстроим стратегию и полностью заберем ответственность за
-                    канал трафика
-                  </div>
-                  <Image
-                    src="/img/cartArrow.png"
-                    alt="arrow"
-                    width={37.65}
-                    height={18.2}
-                  />
-                </div>
-                <div className={`${styles.mob} ${styles.bottomContent}`}>
-                  <div className={styles.imgCart}>
+                  <div className={`${styles.mob} ${styles.bottomContent}`}>
                     <Image
-                      src="/img/yandex.png"
+                      src="/img/yandexDirect.png"
                       alt="yandex"
                       width={48}
                       height={48}
                     />
-                    <Image
-                      src="/img/google.png"
-                      alt="google"
-                      width={48}
-                      height={48}
-                    />
+                    <div className={styles.smallArrow}>
+                      <Image
+                        src="/img/cartArrow.png"
+                        alt="arrow"
+                        width={30.12}
+                        height={14.56}
+                      />
+                    </div>
                   </div>
-                  <div className={styles.smallArrow}>
+                </div>
+              </Link>
+              <Link href="/seo">
+                <div className={styles.seoCart}>
+                  <div className={styles.upFloor}>
+                    <div className={styles.leftPos}>
+                      <span className={styles.redDotWrapper}>
+                        <Image
+                          src="/img/redDot.png"
+                          alt="dot"
+                          width={16.68}
+                          height={16.68}
+                        />
+                      </span>
+                      <div
+                        className={`${styles.cartTag} ${styles.seoTagWidth}`}
+                      >
+                        SEO-продвижение
+                        <br className={styles.mob} /> в Яндекс и Google
+                      </div>
+                    </div>
+                    <div className={styles.imgCart}>
+                      <Image
+                        src="/img/yandex.png"
+                        alt="yandex"
+                        width={70}
+                        height={70}
+                      />
+                      <Image
+                        src="/img/google.png"
+                        alt="google"
+                        width={70}
+                        height={70}
+                      />
+                    </div>
+                  </div>
+                  <div className={styles.botFloor}>
+                    <div className={styles.contextText}>
+                      Привлекаем лидов в 5 раз дешевле, чем с других каналов
+                      трафика
+                    </div>
                     <Image
                       src="/img/cartArrow.png"
                       alt="arrow"
-                      width={30.12}
-                      height={14.56}
+                      width={37.65}
+                      height={18.2}
                     />
                   </div>
+                  <div className={`${styles.mob} ${styles.bottomContent}`}>
+                    <div className={styles.imgCart}>
+                      <Image
+                        src="/img/yandex.png"
+                        alt="yandex"
+                        width={48}
+                        height={48}
+                      />
+                      <Image
+                        src="/img/google.png"
+                        alt="google"
+                        width={48}
+                        height={48}
+                      />
+                    </div>
+                    <div className={styles.smallArrow}>
+                      <Image
+                        src="/img/cartArrow.png"
+                        alt="arrow"
+                        width={30.12}
+                        height={14.56}
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className={styles.rightCartBlock}>
               <div className={styles.auditTag}>Аудит вашей рекламы</div>
@@ -250,10 +259,14 @@ export default function TraficBlock() {
                       if (digits === "") {
                         setPhone("");
                       } else if (digits.length === 1) {
-                        if (digits === "7" || digits === "8") {
+                        if (
+                          digits === "7" ||
+                          digits === "8" ||
+                          digits === "9"
+                        ) {
                           setPhone(digits);
                         }
-                      } else if (phone.length > 0 && digits.length <= 11) {
+                      } else if (digits.length <= 11) {
                         setPhone(digits);
                       }
                     }}
@@ -273,7 +286,7 @@ export default function TraficBlock() {
                     <div className={styles.conf}>
                       Я принимаю условия
                       <br />{" "}
-                      <Link href="/politic">
+                      <Link href="/politica">
                         <span className={styles.confLink}>
                           политики конфиденциальности
                         </span>
@@ -317,7 +330,7 @@ export default function TraficBlock() {
                       <Image
                         src="/img/cartArrow.png"
                         alt="arrow"
-                        width={36}
+                        width={40}
                         height={20}
                       />
                     </>

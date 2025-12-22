@@ -89,8 +89,9 @@ export default function Tag() {
                 <Image
                   src="/img/cartArrow.png"
                   alt="arrow"
-                  width={75}
-                  height={70}
+                  width={40}
+                  height={20}
+                  style={{ marginLeft: "12px" }}
                 />
               </button>
             </div>

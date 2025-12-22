@@ -179,40 +179,14 @@
   margin-top: 30px;
 }
 
+.anchorBut img {
+  position: relative;
+  top: -2px;
+}
+
 .anchorBut:hover {
   background: rgba(255, 97, 79, 1);
   cursor: pointer;
-}
-
-@media (max-width: 1611px) {
-  .n2,
-  .n4 {
-    border-right: none;
-    padding-left: 30px;
-  }
-
-  .n3,
-  .n5 {
-    padding-left: 0px;
-  }
-  .n3 {
-    border-right: 2px solid rgba(255, 255, 255, 0.1);
-  }
-}
-
-@media (max-width: 1107px) {
-  .n1,
-  .n2,
-  .n3,
-  .n4,
-  .n5 {
-    border-right: none;
-    padding-left: 0px;
-  }
-
-  .blog {
-    margin-left: 150px;
-  }
 }
 
 @media (max-width: 950px) {
@@ -482,7 +456,6 @@
   opacity: 1;
 }
 
-/* Галочка */
 .cube {
   width: 24px;
   height: 24px;
@@ -504,7 +477,6 @@
   transform: rotate(45deg);
 }
 
-/* Кнопка */
 .anchorBut {
   width: 460px;
   height: 90px;
@@ -525,6 +497,7 @@
   border: none;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: 700;
 }
 
 /* МОБИЛЬНАЯ ВЕРСИЯ — переопределите стили внутри @media */

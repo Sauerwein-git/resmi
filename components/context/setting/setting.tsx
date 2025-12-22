@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import ModalForm from "../../ModalForm/ModalForm";
 
+import Image from "next/image";
+
 const steps = [
   {
     num: "01",
@@ -48,8 +50,13 @@ export default function Setting() {
           <div className={styles.upBox}>
             <div className={styles.tag}>Дальше – настройка кампаний</div>
             <button type="button" className={styles.button} onClick={openModal}>
-              Начать с бесплатного аудита [&nbsp;
-              <span className={styles.arrow}>→</span>&nbsp;]
+              Начать с бесплатного аудита{" "}
+              <Image
+                src="/img/cartArrow.png"
+                alt="arrow"
+                width={40}
+                height={20}
+              />
             </button>
           </div>
           <div className={styles.botBox}>
@@ -72,8 +79,13 @@ export default function Setting() {
         <div className={styles.section}>
           <div className={styles.tag}>Дальше – настройка кампаний</div>
           <button type="button" className={styles.button} onClick={openModal}>
-            Начать с бесплатного аудита [&nbsp;
-            <span className={styles.arrow}>→</span>&nbsp;]
+            Начать с бесплатного аудита{" "}
+            <Image
+              src="/img/cartArrow.png"
+              alt="arrow"
+              width={40}
+              height={20}
+            />
           </button>
           <div className={styles.invBlock}>
             <div className={styles.leftBlockInv}></div>

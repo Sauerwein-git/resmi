@@ -2,6 +2,7 @@
   background-color: rgba(255, 255, 255, 1);
   padding-top: 80px;
   padding-bottom: 80px;
+
   padding-left: 40px;
   padding-right: 40px;
 }
@@ -28,16 +29,14 @@
   font-weight: 400;
   font-size: 26px;
   line-height: 100%;
+  height: 34px;
   letter-spacing: 0.56px;
   color: rgba(255, 255, 255, 1);
   background: rgba(253, 76, 56, 1);
   width: 75px;
   border-radius: 8px;
-  padding-bottom: 7px;
-  padding-top: 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   margin-top: 80px;
   margin-left: auto;
   margin-right: auto;
@@ -86,16 +85,30 @@
   display: flex;
   gap: 20px;
   margin-top: 40px;
+  margin-left: 0px auto;
+  margin-right: 0px auto;
+}
+
+.cartBlock a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .contextCart,
 .seoCart {
-  width: 751px;
   padding: 30px;
   height: 389px;
   border: none;
   border-radius: 12px;
   box-sizing: border-box;
+  color: inherit;
+  text-decoration: none;
+}
+
+.contextCart a,
+.seoCart a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .contextCart:hover,
@@ -124,6 +137,7 @@
   letter-spacing: -0.6px;
   line-height: 56px;
   color: #ffffff;
+  text-decoration: none;
 }
 
 .botFloor {
@@ -165,7 +179,6 @@
 }
 
 .rightCartBlock {
-  width: 749px;
   height: 798px;
   background: #fd4c38;
   border-radius: 12px;
@@ -189,13 +202,13 @@
   font-size: 28px;
   line-height: 32px;
   letter-spacing: -0.56px;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1);
   margin-top: 20px;
 }
 
 .leftCartBlock,
 .rightCartBlock {
-  flex-shrink: 0;
+  width: 50%;
 }
 
 .inputs {
@@ -211,8 +224,10 @@
   padding-top: 35px;
   padding-bottom: 35px;
   padding-left: 30px;
+
+  padding-right: 20px;
   box-sizing: border-box;
-  width: 689px;
+  width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 12px;
   font-family: "VelaSans";
@@ -289,7 +304,7 @@
 
 .blockBox {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
   max-width: 1520px;
   width: 100%;
@@ -442,19 +457,6 @@
   display: none;
 }
 
-@media (max-width: 1599px) {
-  .cartBlock {
-    max-width: 1520px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-    align-items: center;
-  }
-}
-
 @media (max-width: 1107px) {
   .blockBox {
     display: flex;
@@ -467,6 +469,17 @@
   }
 }
 
+@media (max-width: 1483px) {
+  .auditText {
+    font-family: "VelaSans";
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.56px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+  }
+}
 @media (max-width: 950px) {
   .background {
     padding-top: 40px;
@@ -874,7 +887,7 @@
   .formInput:focus {
     outline: none;
     box-shadow: none;
-    border: none; /* если нужно полностью убрать границу */
+    border: none;
   }
 
   .leftPos {

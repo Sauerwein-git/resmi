@@ -22,12 +22,24 @@ export default function ModalForm({ onClose }) {
       return parts.join("-");
     }
 
-    if (digits.startsWith("7")) {
+    if (digits.startsWith("7") || digits.startsWith("9")) {
       let res = "+7";
-      const p1 = digits.slice(1, 4);
-      const p2 = digits.slice(4, 7);
-      const p3 = digits.slice(7, 9);
-      const p4 = digits.slice(9, 11);
+      const p1 = digits.slice(
+        digits.startsWith("9") ? 0 : 1,
+        digits.startsWith("9") ? 3 : 4
+      );
+      const p2 = digits.slice(
+        digits.startsWith("9") ? 3 : 4,
+        digits.startsWith("9") ? 6 : 7
+      );
+      const p3 = digits.slice(
+        digits.startsWith("9") ? 6 : 7,
+        digits.startsWith("9") ? 8 : 9
+      );
+      const p4 = digits.slice(
+        digits.startsWith("9") ? 8 : 9,
+        digits.startsWith("9") ? 10 : 11
+      );
 
       if (p1) res += `(${p1}`;
       if (p2) res += `)-${p2}`;
@@ -55,7 +67,7 @@ export default function ModalForm({ onClose }) {
     setIsLoading(true);
 
     try {
-      const response = await fetch("/api/send-form", {
+      const response = await fetch("https://research-it.ru/api/send-form.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,11 +80,9 @@ export default function ModalForm({ onClose }) {
       if (response.ok) {
         router.push("/thanks");
       } else {
-        console.error("API error:", data);
         alert(`Ошибка: ${data.error || "Неизвестная ошибка"}`);
       }
     } catch (err) {
-      console.error("Network error:", err);
       alert("Не удалось отправить заявку. Проверьте соединение.");
     } finally {
       setIsLoading(false);
@@ -113,7 +123,7 @@ export default function ModalForm({ onClose }) {
                 if (digits === "") {
                   setPhone("");
                 } else if (digits.length === 1) {
-                  if (digits === "7" || digits === "8") {
+                  if (digits === "7" || digits === "8" || digits === "9") {
                     setPhone(digits);
                   }
                 } else if (digits.length <= 11) {
@@ -133,7 +143,7 @@ export default function ModalForm({ onClose }) {
               ></div>
               <label className={styles.label}>
                 Я принимаю условия <br className="mob" />
-                <Link href="/politic">политики конфиденциальности</Link>
+                <Link href="/politica">политики конфиденциальности</Link>
               </label>
             </div>
 

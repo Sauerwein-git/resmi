@@ -13,7 +13,7 @@ export const casePreviews: { [key: number]: CasePreview } = {
   1: {
     market: "Магазин одежды",
     image: "/img/yandexDirect.png",
-    resultText: "+43 000 000 ₽ РУБЛЕЙ ЗА 4 МЕСЯЦА",
+    resultText: "+43 000 000 РУБЛЕЙ ЗА 4 МЕСЯЦА",
     summaryText:
       "Как с помощью контекстной рекламы мы сделали магазин лидером в регионе",
     storyText:
@@ -24,7 +24,7 @@ export const casePreviews: { [key: number]: CasePreview } = {
   2: {
     market: "Магазин товаров для дома и ремонта",
     image: "/img/yandexDirect.png",
-    resultText: "+71 000 000 ₽ РУБЛЕЙ ЗА 10 месяцев",
+    resultText: "+71 000 000 РУБЛЕЙ ЗА  10 месяцев",
     summaryText:
       "Как с помощью контекстной рекламы мы сделали магазин лидером в регионе",
     storyText:
@@ -35,7 +35,7 @@ export const casePreviews: { [key: number]: CasePreview } = {
   3: {
     market: "Интернет-магазин косметики",
     image: "/img/yandexDirect.png",
-    resultText: "+47 000 000 ₽ за 6 месяцев",
+    resultText: "+47 000 000 РУБЛЕЙ ЗА  6 месяцев",
     summaryText: "Как мы помогли магазину косметики стать заметным на рынке",
     storyText:
       "Магазин без своей аудитории вырос на 70% прибыли за полгода благодаря глубокой аналитике и запуску мобильного приложения",
@@ -44,7 +44,7 @@ export const casePreviews: { [key: number]: CasePreview } = {
   4: {
     market: "Юридические услуги",
     image: "/img/yandexDirect.png",
-    resultText: "+109 000 000 ₽ за 12 месяцев",
+    resultText: "+109 000 000 РУБЛЕЙ ЗА  12 месяцев",
     summaryText: "Как мы увеличили прибыль юридической фирмы на 130%",
     storyText:
       "Расширили географию, настроили воронки продаж и увеличили выручку до 120 ₽ рублей.",
@@ -54,7 +54,7 @@ export const casePreviews: { [key: number]: CasePreview } = {
   5: {
     market: "Медицина",
     image: "/img/yandexDirect.png",
-    resultText: "+33 000 000 ₽ за 10 месяцев",
+    resultText: "+33 000 000 РУБЛЕЙ ЗА  10 месяцев",
     summaryText: "Как мы помогли клинике выйти на стабильную загрузку",
     storyText:
       "Впервые за 10 месяцев работы клиника загрузила кабинеты на 70% круглый год.",

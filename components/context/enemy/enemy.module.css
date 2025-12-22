@@ -92,6 +92,11 @@
   width: 100%;
 }
 
+.button img {
+  position: relative;
+  top: -2px;
+}
+
 .button:hover {
   background: rgba(255, 97, 79, 1);
   cursor: pointer;

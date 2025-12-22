@@ -22,36 +22,39 @@ import Free from "../../../components/seo/free/free";
 import Answers from "../../../components/seo/answers/answers";
 import Else from "../../../components/context/else/else";
 import TraficBlock from "../../../components/home/trafic/traficBlock";
+import ZoomFallbackWrapper from "@/components/ZoomFallbackWrapper";
 
 export default function Seo() {
   return (
     <>
       <Head>
         <meta name="yandex-verification" content="a88abba2c0cfb9f4" />
+        <title>SEO</title>
       </Head>
-      <div className={styles.home_section}>
-        <DynamicHeader />
-        <TagBlock />
-        <Benefit />
-        <Rules />
-        <Case />
-        <Reviews />
-        <Bisn />
-        <Effect />
-        <Setting />
-        <Reccomend />
-        <Nose />
-        <ProducerBlock />
-        <Agency />
-        <Rule />
-        <Team />
-        <Certificate />
-        <Free />
-        <Answers />
-        <Else />
-        <TraficBlock />
-        <Footer />
-      </div>
+      <ZoomFallbackWrapper>
+        <div className={styles.home_section}>
+          <DynamicHeader />
+          <TagBlock />
+          <Benefit />
+          <Rules />
+          <Case />
+          <Reviews />
+          <Bisn />
+          <Effect />
+          <Setting />
+          <Reccomend />
+          <Nose />
+          <ProducerBlock />
+          <Agency />
+          <Rule />
+          <Team />
+          <Free />
+          <Answers />
+          <Else />
+          <TraficBlock />
+          <Footer />
+        </div>
+      </ZoomFallbackWrapper>
     </>
   );
 }

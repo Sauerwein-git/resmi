@@ -13,26 +13,33 @@ import { Team } from "../../components/home/team/team";
 import Footer from "../../components/footer/footer";
 import DynamicHeader from "../../components/header/header";
 
+import ZoomFallbackWrapper from "@/components/ZoomFallbackWrapper"; // ← новое
+
 export default function Home() {
   return (
     <>
       <Head>
         <meta name="yandex-verification" content="a88abba2c0cfb9f4" />
+        <title>reSearch it</title>
       </Head>
-      <div className={styles.home_section}>
-        <DynamicHeader />
-        <TagBlock />
-        <TraficBlock />
-        <Partners />
-        <Case />
-        <Reviews />
-        <SettingBlock />
-        <ProducerBlock />
-        <Agency />
-        <Rule />
-        <Team />
-        <Footer />
-      </div>
+
+      {/* Zoom только через CSS для Chromium/Safari; fallback — для Firefox */}
+      <ZoomFallbackWrapper>
+        <div className={styles.home_section}>
+          <DynamicHeader />
+          <TagBlock />
+          <TraficBlock />
+          <Partners />
+          <Case />
+          <Reviews />
+          <SettingBlock />
+          <ProducerBlock />
+          <Agency />
+          <Rule />
+          <Team />
+          <Footer />
+        </div>
+      </ZoomFallbackWrapper>
     </>
   );
 }

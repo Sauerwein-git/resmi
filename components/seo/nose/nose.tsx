@@ -20,7 +20,9 @@ export default function Nose() {
             <div className={styles.left}>
               <div className={styles.text}>
                 Мы не настраиваем SEO просто ради трафика или запросов в ТОП.
-                <span className="white">Нам важно развитие вашего бизнеса</span>
+                <span className="white">
+                  &nbsp;Нам важно развитие вашего бизнеса
+                </span>
               </div>
               <div className={styles.textL}>
                 Если мы видим возможности для улучшений, мы собираем мнения

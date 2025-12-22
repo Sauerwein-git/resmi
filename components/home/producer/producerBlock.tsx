@@ -71,7 +71,7 @@ export default function ProducerBlock() {
                 </div>
                 <div className={`${styles.mass} ${styles.t4}`}>
                   <div className={styles.massTag}>
-                    &gt;800 ₽ <span className={styles.rub}>₽</span>
+                    &gt;800 МЛН<span className={styles.rub}>₽</span>
                   </div>
                   <div className={`${styles.massText} ${styles.m4}`}>
                     Суммарный доход всех проектов в 2024 году

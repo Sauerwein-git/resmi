@@ -2,15 +2,14 @@
   background-color: rgba(242, 242, 242, 1);
   padding-top: 40px;
   padding-bottom: 80px;
-  padding-left: 39px;
-  padding-right: 29px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .section {
   max-width: 1600px;
   width: 100%;
   margin: 0 auto;
-  padding-left: 29px;
 }
 
 .tag {
@@ -24,6 +23,14 @@
   margin: 0 auto;
 }
 
+.rub {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 60.5px;
+  line-height: 50px;
+  letter-spacing: -0.6px;
+}
+
 .block {
   max-width: 1520px;
   width: 100%;
@@ -32,7 +39,7 @@
 }
 
 .bt {
-  margin-top: 72px;
+  margin-top: 52px;
   border-top: 2px solid rgba(64, 72, 80, 0.1);
 }
 
@@ -153,13 +160,6 @@
 
 .pc {
   display: block;
-}
-
-@media (max-width: 1599px) {
-  .tag {
-    display: flex;
-    text-align: center;
-  }
 }
 
 @media (max-width: 950px) {

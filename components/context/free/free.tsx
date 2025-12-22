@@ -134,8 +134,13 @@ export default function Free() {
                     "Отправка..."
                   ) : (
                     <>
-                      Оставить заявку [ <span className={styles.arrow}>→</span>{" "}
-                      ]
+                      Оставить заявку{" "}
+                      <Image
+                        src="/img/cartArrow.png"
+                        alt="arrow"
+                        width={40}
+                        height={20}
+                      />
                     </>
                   )}
                 </button>

@@ -6,6 +6,7 @@ import TagBlock from "../../../components/context/tagBlock/tagBlock";
 import { Benefit } from "../../../components/context/benefit/benefit";
 import { Case } from "../../../components/context/case/case";
 import { Reviews } from "../../../components/context/reviews/reviews";
+import ZoomFallbackWrapper from "@/components/ZoomFallbackWrapper";
 
 export default function Services() {
   return (
@@ -13,14 +14,16 @@ export default function Services() {
       <Head>
         <meta name="yandex-verification" content="a88abba2c0cfb9f4" />
       </Head>
-      <div className={styles.home_section}>
-        <DynamicHeader />
-        <TagBlock />
-        <Benefit />
-        <Case />
-        <Reviews />
-        <Footer />
-      </div>
+      <ZoomFallbackWrapper>
+        <div className={styles.home_section}>
+          <DynamicHeader />
+          <TagBlock />
+          <Benefit />
+          <Case />
+          <Reviews />
+          <Footer />
+        </div>
+      </ZoomFallbackWrapper>
     </>
   );
 }
