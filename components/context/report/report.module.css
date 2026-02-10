@@ -141,7 +141,7 @@
 .button img {
   filter: brightness(0.25) saturate(0);
   position: relative;
-  top: -2px;
+  top: -3px;
 }
 
 .button:hover {
@@ -188,7 +188,7 @@
 
   .arrow {
     position: relative;
-    top: -2px;
+    top: -3px;
     font-weight: 600;
   }
 

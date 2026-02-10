@@ -4,6 +4,7 @@ import TagBlock from "../../../components/politic/tagBlock/tagBlock";
 import Footer from "../../../components/footer/footer";
 import DynamicHeader from "../../../components/header/header";
 import ZoomFallbackWrapper from "@/components/ZoomFallbackWrapper";
+import Politica from "../../../components/politic/tagBlock/politica";
 
 export default function Politic() {
   return (
@@ -15,7 +16,7 @@ export default function Politic() {
       <ZoomFallbackWrapper>
         <div className={styles.home_section}>
           <DynamicHeader />
-          <TagBlock />
+          <Politica />
           <Footer />
         </div>
       </ZoomFallbackWrapper>

@@ -67,23 +67,37 @@
 }
 
 .swiperSlide {
-  display: inline-flex !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: auto !important;
+  height: 100%;
 }
 
 .blockSwiper {
-  padding: 60px 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  padding: 60px 75px 50px 75px ;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
+
   font-family: "BebasNeue";
   font-weight: 700;
   font-size: 40px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: 0px;
   color: rgba(255, 255, 255, 1);
+
   text-align: center;
   white-space: nowrap;
+}
+
+.blockSwiperText {
+  display: inline-block;
+  transform: translateY(-0.06em);
 }
 
 .indicatorContainer {
@@ -178,23 +192,37 @@
   }
 
   .swiperSlide {
-    display: inline-flex !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     width: auto !important;
+    height: 100%;
   }
 
   .blockSwiper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     padding: 42.5px 34px;
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.1);
+
     font-family: "BebasNeue";
     font-weight: 700;
     font-size: 30px;
-    line-height: 100%;
+    line-height: 1;
     letter-spacing: 0px;
     color: rgba(255, 255, 255, 1);
+
     text-align: center;
     white-space: nowrap;
+  }
+
+  .blockSwiperText {
+    display: inline-block;
+    transform: translateY(-0.06em);
   }
 
   .invBlock {

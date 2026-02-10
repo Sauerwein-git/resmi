@@ -244,3 +244,8 @@
     height: 35px;
   }
 }
+
+.anchorBut img {
+  position: relative;
+  top: -3px;
+}

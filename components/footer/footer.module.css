@@ -4,14 +4,91 @@
   padding-bottom: 80px;
   padding-left: 40px;
   padding-right: 40px;
+  box-sizing: border-box;
 }
 
 .section {
-  max-width: 1600px;
+  max-width: 1520px;
   width: 100%;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 40px;
+  box-sizing: border-box;
+}
+
+.smallTag {
+  font-family: "BebasNeue";
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  color: rgba(153, 165, 177, 1);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+.invBlock {
+  display: none;
+  margin-top: 20px;
+  border-top: 2px solid rgba(149, 160, 171, 1);
+}
+
+.leftBlockInv {
+  border-right: 2px solid rgba(85, 92, 99, 1);
+  height: 35px;
+  width: 50%;
+}
+
+.rightBlockInv {
+  height: 35px;
+  width: 50%;
+}
+
+.block {
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 2px solid rgba(134, 145, 156, 0.15);
+  border-bottom: 2px solid rgba(134, 145, 156, 0.15);
+  display: flex;
+  margin-top: 0px;
+}
+
+.auditBlock {
+  border-bottom: 2px solid rgba(134, 145, 156, 0.15);
+}
+
+.leftBlock,
+.rightBlock {
+  width: 50%;
+  box-sizing: border-box;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.leftBlock {
+  border-right: 2px solid rgba(134, 145, 156, 0.15);
+}
+
+.rightBlock {
+  padding-left: 40px;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: -0.6px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.red {
+  color: rgba(253, 76, 56, 1);
+}
+
+.leftF {
+  display: flex;
+  flex-direction: column;
 }
 
 .firstTag {
@@ -36,15 +113,124 @@
   margin-top: 12px;
 }
 
-.leftF {
+/* --- form --- */
+
+.footerForm {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  width: 100%;
 }
 
-.placeAnswer a {
-  text-decoration: none;
-  color: rgba(255, 255, 255, 1);
+.footerInput {
+  width: 100%;
+  padding-left: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "VelaSans";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  letter-spacing: -0.48px;
+  box-sizing: border-box;
+  outline: none;
+  height: 87px;
 }
+
+.footerInput::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footerInput:focus {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.footerAgreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footerCheckbox {
+  width: 23px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.footerCheckbox.checked {
+  background: rgba(253, 76, 56, 1);
+  border-color: rgba(253, 76, 56, 1);
+}
+
+.footerCheckbox.checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footerLabel {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footerPolicyLink {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.footerSubmitButton {
+  width: 100%;
+  margin-top: 30px;
+  height: 90px;
+  background: rgba(253, 76, 56, 1);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0.56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.footerSubmitButton img {
+  position: relative;
+  top: -2px;
+}
+
+.footerSubmitButton:hover:not(:disabled) {
+  background: rgba(255, 97, 79, 1);
+}
+
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* --- brand block --- */
 
 .lTag {
   color: rgba(255, 255, 255, 1);
@@ -64,60 +250,13 @@
   color: rgba(146, 146, 146, 1);
 }
 
-.smallTag {
-  font-family: "BebasNeue";
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 100%;
-  letter-spacing: 0.56px;
-  color: rgba(153, 165, 177, 1);
+.imgBlock {
   display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  margin-top: 60px;
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.tag {
-  font-family: "BebasNeue";
-  font-weight: 700;
-  font-size: 415px;
-  letter-spacing: -10.6px;
-  color: #ffffff;
-  white-space: nowrap;
-  margin: 0;
-  line-height: 301px;
-  transform-origin: left bottom;
-  max-width: 1560px;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  margin: 0 auto;
-  margin-top: 50px;
-  max-height: 350px;
-}
-
-.divrBlock {
-  position: relative;
-  z-index: 10;
-}
-
-.divrBlock {
-  display: flex;
-  max-width: 1520px;
-  width: 100%;
-  margin: 0 auto;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-family: "VelaSans";
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: -0.44px;
-}
-
-.divrBlock a {
-  color: rgba(195, 195, 195, 0.5);
-  text-decoration: none;
-}
+/* --- contacts/menu --- */
 
 .placeText {
   color: rgba(255, 255, 255, 0.5);
@@ -141,64 +280,21 @@
   margin-top: 15px;
 }
 
-.block {
-  max-width: 1520px;
-  width: 100%;
-  margin: 0 auto;
-  border-top: 2px solid rgba(134, 145, 156, 0.15);
-  border-bottom: 2px solid rgba(134, 145, 156, 0.15);
-  display: flex;
-  margin-top: 0px;
-}
-
-.leftBlock,
-.rightBlock {
-  width: 50%;
-  box-sizing: border-box;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.leftBlock {
-  border-right: 2px solid rgba(134, 145, 156, 0.15);
-  font-family: "BebasNeue";
-  font-weight: 700;
-  font-size: 100px;
-  letter-spacing: -2px;
-  color: rgba(64, 72, 80, 1);
-  line-height: 100px;
-}
-
-.rightBlock {
-  padding-left: 40px;
-  font-family: "BebasNeue";
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 60px;
-  letter-spacing: -0.6px;
+.placeAnswer a {
+  text-decoration: none;
   color: rgba(255, 255, 255, 1);
-}
-
-.imgBlock {
-  display: flex;
-  gap: 25px;
-  margin-top: 40px;
-  order: 3;
-}
-
-.invBlock {
-  display: none;
-  margin-top: 20px;
-  border-top: 2px solid rgba(149, 160, 171, 1);
-}
-
-.red {
-  color: rgba(253, 76, 56, 1);
 }
 
 .rightBlock a {
   text-decoration: none;
   color: inherit;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  align-items: flex-start;
 }
 
 .tagClient {
@@ -208,6 +304,15 @@
   line-height: 60px;
   letter-spacing: -0.4px;
   margin-bottom: 30px;
+}
+
+.textClient {
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: -0.22px;
+  margin-bottom: 15px;
 }
 
 .caseBlock {
@@ -221,24 +326,80 @@
   letter-spacing: -0.4px;
 }
 
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
+.caseTag a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.textClient {
+.linkButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.linkButton:hover {
+  text-decoration: underline;
+}
+
+.obl {
+  /* на мобиле у тебя был низ-бордер — оставим класс для совместимости */
+}
+
+/* --- huge title --- */
+
+.bigTag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 415px;
+  letter-spacing: -10.6px;
+  color: #ffffff;
+  white-space: nowrap;
+  line-height: 415px;
+  margin-left: -15px;
+  transform-origin: left bottom;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  margin-top: 50px;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.divrBlock {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  max-width: 1520px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
   font-family: "VelaSans";
-  font-weight: 500;
   font-size: 22px;
   line-height: 30px;
-  letter-spacing: -0.22px;
-  margin-bottom: 15px;
+  letter-spacing: -0.44px;
+  gap: 10px 20px;
 }
 
+.divrBlock a {
+  color: rgba(195, 195, 195, 0.5);
+  text-decoration: none;
+}
+
+/* helpers */
+.mobOnly {
+  display: none;
+}
+
+/* --- responsive --- */
+
 @media (max-width: 1550px) {
-  .tag {
-    left: -15px;
+  .bigTag {
+    margin-left: -15px;
   }
 }
 
@@ -250,39 +411,22 @@
     padding-right: 15px;
   }
 
+  .section {
+    padding: 0;
+    overflow: hidden;
+  }
+
   .invBlock {
     display: block;
     margin-top: 20px;
     border-top: 2px solid rgba(85, 92, 99, 1);
   }
 
-  .obl {
-    border-bottom: 2px solid rgba(85, 92, 99, 1);
-  }
-
-  .leftBlockInv {
-    border-right: 2px solid rgba(85, 92, 99, 1);
-    height: 35px;
-    width: 50%;
-  }
-
   .smallTag {
-    font-family: "BebasNeue";
-    font-weight: 400;
     font-size: 20px;
-    line-height: 100%;
     letter-spacing: 0.4px;
-    color: rgba(153, 165, 177, 1);
-    display: flex;
-    justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .section {
-    margin: 0 auto;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 0;
+    margin-top: 0px;
   }
 
   .block {
@@ -290,27 +434,69 @@
     border-top: none;
     display: block;
     margin-bottom: 30px;
+    border-bottom: none;
   }
 
   .leftBlock,
   .rightBlock {
     width: 100%;
-    box-sizing: border-box;
     padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .leftBlock {
+    border-right: none;
   }
 
   .rightBlock {
     padding-left: 0px;
-    font-family: "BebasNeue";
-    font-weight: 700;
     font-size: 45px;
     line-height: 44px;
     letter-spacing: -0.45px;
-    color: rgba(255, 255, 255, 1);
+    margin-top: 20px;
+  }
+
+  .firstTag {
+    font-size: 50px;
+    line-height: 44px;
+    letter-spacing: -0.5px;
+    max-width: 345px;
+  }
+
+  .firstText {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.18px;
+    max-width: 345px;
+  }
+
+  .footerInput {
+    font-size: 16px;
+    height: 50px;
+    padding-left: 16px;
+  }
+
+  .footerSubmitButton {
+    font-size: 18px;
+    height: 50px;
+    margin-top: 16px;
+  }
+
+  .footerLabel {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .footerCheckbox {
+    width: 14px;
+    height: 14px;
+  }
+
+  .footerCheckbox.checked::after {
+    font-size: 10px;
   }
 
   .imgBlock {
-    order: 1;
     margin-top: 0;
     margin-bottom: 20px;
     gap: 15px;
@@ -322,80 +508,40 @@
   }
 
   .lTag {
-    order: 2;
-    margin-bottom: 10px;
     font-size: 40px;
-    line-height: 100%;
     letter-spacing: -0.8px;
+    margin-bottom: 10px;
   }
 
   .lText {
-    order: 3;
     font-size: 15.72px;
     line-height: 17.27px;
     letter-spacing: -0.3px;
   }
 
-  .leftBlock {
-    border-right: none;
-    font-family: "BebasNeue";
-    font-weight: 700;
-    font-size: 100px;
-    letter-spacing: -2px;
-    color: rgba(64, 72, 80, 1);
-    line-height: 100px;
-  }
-
   .placeText {
-    color: rgba(255, 255, 255, 0.5);
-    font-family: "VelaSans";
-    font-weight: 500;
     font-size: 18px;
-    line-height: 30px;
     letter-spacing: -0.18px;
   }
 
-  .tagPlaceHolder:not(:first-child) {
-    margin-top: 40px;
-  }
-
   .placeAnswer {
-    font-family: "BebasNeue";
-    color: rgba(255, 255, 255, 1);
     font-size: 40px;
-    line-height: 60px;
+    line-height: 46px;
     letter-spacing: -0.4px;
-    margin-top: 15px;
-  }
-
-  .caseBlock {
-    flex-direction: inherit;
+    margin-top: 8px;
   }
 
   .flex {
     gap: 0px;
   }
 
-  .divrBlock {
-    gap: 20px;
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: -0.16px;
-  }
-
-  .tag {
-    line-height: 78.92px;
+  .clientBlock {
     margin-bottom: 30px;
-    letter-spacing: -2.83px;
-  }
-
-  .placeAnswer {
-    margin-top: 0px;
   }
 
   .textClient {
     font-size: 18px;
-    line-height: 30px;
+    line-height: 26px;
     letter-spacing: -0.18px;
   }
 
@@ -403,148 +549,35 @@
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 35px;
-    line-height: 60px;
+    line-height: 44px;
     letter-spacing: -0.35px;
   }
 
-  .clientBlock {
-    margin-bottom: 30px;
+  .caseBlock {
+    flex-direction: row;
+    gap: 20px;
+    font-size: 35px;
+    line-height: 44px;
   }
-}
 
-.footerForm {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
-
-.footerInput {
-  width: 100%;
-  padding-left: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  border-radius: 8px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: "VelaSans";
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 34px;
-  letter-spacing: -0.48px;
-
-  box-sizing: border-box;
-  outline: none;
-  height: 87px;
-}
-
-.footerInput::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.footerInput:focus {
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.footerAgreement {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.footerCheckbox {
-  width: 23px;
-  height: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-radius: 3px;
-  cursor: pointer;
-  position: relative;
-  flex-shrink: 0;
-}
-
-.footerCheckbox.checked {
-  background: rgba(253, 76, 56, 1);
-  border-color: rgba(253, 76, 56, 1);
-}
-
-.footerCheckbox.checked::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 10px;
-  font-weight: bold;
-}
-
-.footerLabel {
-  font-family: "VelaSans";
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 22px;
-  letter-spacing: -0.4px;
-  color: rgba(255, 255, 255, 0.6);
-  cursor: pointer;
-}
-
-.footerLabel a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.footerSubmitButton {
-  width: 100%;
-  margin-top: 30px;
-  height: 90px;
-  box-sizing: border-box;
-  background: rgba(253, 76, 56, 1);
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-family: "BebasNeue";
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 100%;
-  letter-spacing: 0.56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  cursor: pointer;
-  text-align: center;
-  gap: 5px;
-}
-
-.footerSubmitButton img {
-  position: relative;
-  justify-content: end;
-  align-items: center;
-  top: -2px;
-}
-
-.footerSubmitButton:hover:not(:disabled) {
-  background: rgba(255, 97, 79, 1);
-}
-
-@media (max-width: 950px) {
-  .footerInput {
+  .divrBlock {
     font-size: 16px;
-    height: 50px;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    gap: 10px 16px;
+    margin-top: 10px;
   }
 
-  .footerSubmitButton {
-    font-size: 18px;
-    height: 50px;
+  .bigTag {
+    font-size: 110px;
+    line-height: 1;
+    letter-spacing: -2.83px;
+    margin-top: 30px;
+    margin-left: 0;
+    max-height: 90px;
   }
 
-  .footerLabel {
-    font-size: 12px;
-    line-height: 16px;
-  }
-
-  .footerCheckbox {
-    width: 14px;
-    height: 14px;
+  .mobOnly {
+    display: inline;
   }
 }

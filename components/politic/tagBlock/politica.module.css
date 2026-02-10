@@ -1,0 +1,104 @@
+.background {
+  background-color: rgba(242, 242, 242, 1);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.section {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.back {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.56px;
+  color: rgba(134, 145, 156, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -1px;
+}
+
+.tag {
+  font-family: "BebasNeue";
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 135px;
+  letter-spacing: -3px;
+  max-width: 1200px;
+  color: rgba(64, 72, 80, 1);
+  margin: 0;
+}
+
+.text {
+  margin-top: 60px;
+  font-family: "VelaSans";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.24px;
+  color: rgba(134, 145, 156, 1);
+
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 950px) {
+  .background {
+    background-color: #404850;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+  }
+
+  .section {
+    max-width: 375px;
+  }
+
+  .back {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+  }
+
+  .tag {
+    font-size: 70px;
+    line-height: 60px;
+    letter-spacing: -1.4px;
+    color: #ffffff;
+    margin-top: 10px;
+    max-width: 345px;
+  }
+
+  .text {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: -0.18px;
+    max-width: 345px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+}

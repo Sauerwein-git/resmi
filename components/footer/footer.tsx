@@ -1,58 +1,96 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./footer.module.css";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useMemo, useState, type FormEvent } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import ModalForm from "../ModalForm/ModalForm";
+
+function normalizePhoneDigits(raw: string): string {
+  // оставляем только цифры
+  let digits = raw.replace(/\D/g, "");
+
+  // если человек начинает с 9 — считаем что это РФ номер без кода
+  if (digits.startsWith("9")) digits = `7${digits}`;
+
+  // ограничиваем 11 цифрами
+  if (digits.length > 11) digits = digits.slice(0, 11);
+
+  // если первая цифра не 7/8 — оставим как есть (пользователь может стирать/править)
+  return digits;
+}
+
+function formatPhoneForDisplay(digits: string): string {
+  if (!digits) return "";
+
+  // 8 XXX XXX XX XX
+  if (digits.startsWith("8")) {
+    const p0 = digits.slice(0, 1);
+    const p1 = digits.slice(1, 4);
+    const p2 = digits.slice(4, 7);
+    const p3 = digits.slice(7, 9);
+    const p4 = digits.slice(9, 11);
+    return [p0, p1, p2, p3, p4].filter(Boolean).join("-");
+  }
+
+  // +7(XXX)-XXX-XX-XX
+  if (digits.startsWith("7")) {
+    const p1 = digits.slice(1, 4);
+    const p2 = digits.slice(4, 7);
+    const p3 = digits.slice(7, 9);
+    const p4 = digits.slice(9, 11);
+
+    let res = "+7";
+    if (p1) res += `(${p1}`;
+    if (p2) res += `)-${p2}`;
+    if (p3) res += `-${p3}`;
+    if (p4) res += `-${p4}`;
+    return res;
+  }
+
+  // fallback — просто цифры
+  return digits;
+}
+
+function isValidRuPhone(digits: string): boolean {
+  // принимаем только 11 цифр, начинается с 7 или 8
+  return (
+    digits.length === 11 && (digits.startsWith("7") || digits.startsWith("8"))
+  );
+}
 
 export default function Footer() {
   const router = useRouter();
+  const pathname = usePathname();
+
   const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
+  const [phoneDigits, setPhoneDigits] = useState("");
   const [isAgreed, setIsAgreed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [isClient, setIsClient] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
-  const isThanksPage = isClient && router.pathname === "/thanks";
+  const isThanksPage = pathname === "/thanks";
 
-  const formatPhoneForDisplay = (digits: string): string => {
-    if (digits.startsWith("8")) {
-      const parts = [
-        digits.slice(0, 1),
-        digits.slice(1, 4),
-        digits.slice(4, 7),
-        digits.slice(7, 9),
-        digits.slice(9, 11),
-      ].filter(Boolean);
-      return parts.join("-");
-    }
+  const phoneDisplay = useMemo(
+    () => formatPhoneForDisplay(phoneDigits),
+    [phoneDigits],
+  );
 
-    if (digits.startsWith("7") || digits.startsWith("9")) {
-      let res = "+7";
-      const start = digits.startsWith("9") ? 0 : 1;
-      const p1 = digits.slice(start, start + 3);
-      const p2 = digits.slice(start + 3, start + 6);
-      const p3 = digits.slice(start + 6, start + 8);
-      const p4 = digits.slice(start + 8, start + 10);
-
-      if (p1) res += `(${p1}`;
-      if (p2) res += `)-${p2}`;
-      if (p3) res += `-${p3}`;
-      if (p4) res += `-${p4}`;
-      return res;
-    }
-
-    return digits;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!name.trim() || phone.length < 11) {
-      alert("Пожалуйста, заполните все поля корректно.");
+    const n = name.trim();
+    if (!n) {
+      alert("Пожалуйста, укажите имя.");
+      return;
+    }
+
+    if (!isValidRuPhone(phoneDigits)) {
+      alert("Пожалуйста, введите корректный номер телефона (11 цифр).");
       return;
     }
 
@@ -66,23 +104,33 @@ export default function Footer() {
     try {
       const response = await fetch("https://research-it.ru/api/send-form.php", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, phone }),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: n, phone: phoneDigits }),
       });
 
-      const data = await response.json();
+      // если PHP иногда возвращает не JSON — не падаем
+      let data: unknown = null;
+      try {
+        data = await response.json();
+      } catch {
+        data = null;
+      }
 
       if (response.ok) {
         setName("");
-        setPhone("");
+        setPhoneDigits("");
         setIsAgreed(false);
         router.push("/thanks");
       } else {
-        alert(`Ошибка: ${data.error || "Неизвестная ошибка"}`);
+        const msg =
+          typeof data === "object" && data && "error" in data
+            ? String(
+                (data as { error?: unknown }).error ?? "Неизвестная ошибка",
+              )
+            : "Неизвестная ошибка";
+        alert(`Ошибка: ${msg}`);
       }
-    } catch (err) {
+    } catch {
       alert("Не удалось отправить заявку. Проверьте соединение.");
     } finally {
       setIsLoading(false);
@@ -91,139 +139,135 @@ export default function Footer() {
 
   return (
     <>
-      <div className={` ${styles.background} ${styles.pc}`}>
+      <footer className={styles.background}>
         <div className={styles.section}>
           {!isThanksPage && (
             <div className={styles.smallTag}>
               Бесплатный аудит вашей рекламы
             </div>
           )}
+
           <div className={styles.invBlock}>
-            <div className={styles.leftBlockInv}></div>
-            <div className={styles.rightBlockInv}></div>
+            <div className={styles.leftBlockInv} />
+            <div className={styles.rightBlockInv} />
           </div>
+
           {!isThanksPage && (
-            <div className={styles.block}>
+            <div className={`${styles.block} ${styles.auditBlock}`}>
               <div className={styles.leftBlock}>
                 <div className={styles.firstTag}>
                   Есть запрос на рост бизнеса?{" "}
-                  <span className="red">Давайте пообщаемся</span>
+                  <span className={styles.red}>Давайте пообщаемся</span>
                 </div>
                 <div className={styles.firstText}>
                   Мы оценим текущую ситуацию и расскажем, чем можем быть вам
                   полезны. Свяжемся в течение 24-х часов и все организуем
                 </div>
               </div>
-              <div className={styles.rightBlock}>
-                <div className={styles.forma}>
-                  <form onSubmit={handleSubmit} className={styles.footerForm}>
-                    <input
-                      type="text"
-                      placeholder="Ваше имя"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      className={styles.footerInput}
-                      required
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Номер телефона"
-                      value={formatPhoneForDisplay(phone)}
-                      onChange={(e) => {
-                        const input = e.target.value;
-                        const digits = input.replace(/\D/g, "");
 
-                        if (digits === "") {
-                          setPhone("");
-                        } else if (digits.length === 1) {
-                          if (
-                            digits === "7" ||
-                            digits === "8" ||
-                            digits === "9"
-                          ) {
-                            setPhone(digits);
-                          }
-                        } else if (digits.length <= 11) {
-                          setPhone(digits);
-                        }
-                      }}
-                      className={styles.footerInput}
-                      required
-                    />
-                    <div className={styles.footerAgreement}>
-                      <div
-                        className={`${styles.footerCheckbox} ${
-                          isAgreed ? styles.checked : ""
-                        }`}
-                        onClick={() => setIsAgreed(!isAgreed)}
-                      ></div>
-                      <label className={styles.footerLabel}>
-                        Я принимаю условия{" "}
-                        <Link href="/politica">
-                          политики конфиденциальности
-                        </Link>
-                      </label>
-                    </div>
+              <div className={styles.rightBlock}>
+                <form onSubmit={handleSubmit} className={styles.footerForm}>
+                  <input
+                    type="text"
+                    placeholder="Ваше имя"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    className={styles.footerInput}
+                    autoComplete="name"
+                    required
+                  />
+
+                  <input
+                    type="tel"
+                    placeholder="Номер телефона"
+                    value={phoneDisplay}
+                    onChange={(e) =>
+                      setPhoneDigits(normalizePhoneDigits(e.target.value))
+                    }
+                    inputMode="tel"
+                    autoComplete="tel"
+                    className={styles.footerInput}
+                    required
+                  />
+
+                  <div className={styles.footerAgreement}>
                     <button
-                      type="submit"
-                      disabled={!isAgreed || isLoading}
-                      className={`${styles.footerSubmitButton} ${
-                        (!isAgreed || isLoading) && styles.disabled
-                      }`}
-                    >
-                      {isLoading ? "Отправка..." : "Оставить заявку"}
-                      <Image
-                        src="/img/cartArrow.png"
-                        alt="arrow"
-                        width={40}
-                        height={20}
-                      />
-                    </button>
-                  </form>
-                </div>
+                      type="button"
+                      className={`${styles.footerCheckbox} ${isAgreed ? styles.checked : ""}`}
+                      aria-pressed={isAgreed}
+                      aria-label="Согласие с политикой конфиденциальности"
+                      onClick={() => setIsAgreed((v) => !v)}
+                    />
+                    <div className={styles.footerLabel}>
+                      Я принимаю условия{" "}
+                      <Link
+                        href="/politica"
+                        className={styles.footerPolicyLink}
+                      >
+                        политики конфиденциальности
+                      </Link>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={!isAgreed || isLoading}
+                    className={`${styles.footerSubmitButton} ${
+                      !isAgreed || isLoading ? styles.disabled : ""
+                    }`}
+                  >
+                    {isLoading ? "Отправка..." : "Оставить заявку"}
+                    <Image
+                      src="/img/cartArrow.png"
+                      alt="arrow"
+                      width={40}
+                      height={20}
+                    />
+                  </button>
+                </form>
               </div>
             </div>
           )}
+
           <div className={styles.block}>
             <div className={styles.leftBlock}>
               <div className={styles.leftF}>
                 <div className={styles.lTag}>RE SEARCH IT</div>
                 <div className={styles.lText}>rock your business</div>
+
                 <div className={styles.imgBlock}>
                   <Image
                     src="/img/hatter.png"
-                    alt="Previous"
+                    alt="icon"
                     width={45}
                     height={45}
-                    className={styles.navButton}
                   />
                   <Image
                     src="/img/flash.png"
-                    alt="Previous"
+                    alt="icon"
                     width={45}
                     height={45}
-                    className={styles.navButton}
                   />
                   <Image
                     src="/img/target.png"
-                    alt="Previous"
+                    alt="icon"
                     width={45}
                     height={45}
-                    className={styles.navButton}
                   />
                 </div>
               </div>
             </div>
+
             <div className={styles.rightBlock}>
-              Ваш партнер
-              <br className="mob" /> в digital-маркетинге. Повышаем{" "}
+              Ваш партнер <br className={styles.mobOnly} /> в
+              digital-маркетинге. Повышаем{" "}
               <span className={styles.red}>
-                продажи
-                <br className="mob" /> и прибыль
+                продажи <br className={styles.mobOnly} /> и прибыль
               </span>{" "}
               в вашем бизнесе
             </div>
           </div>
+
           <div className={styles.block}>
             <div className={`${styles.leftBlock} ${styles.obl}`}>
               <div className={styles.leftF}>
@@ -233,25 +277,37 @@ export default function Footer() {
                     <Link href="tel:+79999999999">+7 999 999 99 99</Link>
                   </div>
                 </div>
+
                 <div className={styles.tagPlaceHolder}>
                   <div className={styles.placeText}>Написать</div>
-                  <div className={styles.placeAnswer}>hi@research-it.ru</div>
+                  <div className={styles.placeAnswer}>
+                    <Link href="mailto:hi@research-it.ru">
+                      hi@research-it.ru
+                    </Link>
+                  </div>
                 </div>
+
                 <div className={styles.tagPlaceHolder}>
                   <div className={styles.placeText}>Быстрая связь</div>
                   <div className={styles.placeAnswer}>
-                    <Link href="https://web.telegram.org/">
-                      Telegram / WhatsApp
+                    <Link
+                      href="https://web.telegram.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Telegram
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
+
             <div className={`${styles.rightBlock} ${styles.flex}`}>
               <div className={styles.clientBlock}>
                 <div className={styles.tagClient}>
                   <Link href="/seo">Трафик и клиенты</Link>
                 </div>
+
                 <div className={styles.textClient}>
                   <Link href="/context">Контекстная реклама в Я.Директ</Link>
                 </div>
@@ -259,34 +315,32 @@ export default function Footer() {
                   <Link href="/context">SEO-продвижение</Link>
                 </div>
                 <div className={styles.textClient}>
-                  <span
-                    onClick={() => {
-                      const event = new MouseEvent("click", { bubbles: true });
-                      document
-                        .querySelector("#openModal")
-                        ?.dispatchEvent(event);
-                    }}
-                    style={{ cursor: "pointer" }}
-                    id="openModal"
+                  <button
+                    type="button"
+                    className={styles.linkButton}
+                    onClick={openModal}
                   >
                     Бесплатный аудит вашей рекламы
-                  </span>
+                  </button>
                 </div>
               </div>
+
               <div className={styles.caseBlock}>
                 <div className={styles.caseTag}>
                   <Link href="/case">Кейсы</Link>
                 </div>
                 <div className={styles.caseTag}>
-                  <Link href="/about">о нас</Link>
+                  <Link href="/about">О нас</Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.tag}>RE SEARCH IT</div>
+
+          <div className={styles.bigTag}>RE SEARCH IT</div>
+
           <div className={styles.divrBlock}>
             <div className={styles.divrLink}>
-              <Link href="/">© RE SEARCH IT, 2025</Link>
+              <Link href="/">© RE SEARCH IT, 2026</Link>
             </div>
             <div className={styles.divrLink}>
               <Link href="/politica">
@@ -298,7 +352,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-      </div>
+      </footer>
+
+      {isModalOpen && <ModalForm onClose={closeModal} />}
     </>
   );
 }

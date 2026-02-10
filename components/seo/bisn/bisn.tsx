@@ -105,23 +105,15 @@ export default function Bisn() {
                 <br /> для вашей ниши
               </div>
               <div className={styles.massZone}>
-                <Link
-                  href="https://web.telegram.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.ctaButton}
-                >
-                  TG
-                </Link>
-                <Link
-                  href="https://www.whatsapp.com/?lang=ru_RU"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.ctaButton}
-                >
-                  WA
-                </Link>
-              </div>
+  <a
+    href="https://web.telegram.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className={styles.massLink}
+  >
+    Telegram
+  </a>
+</div>
             </div>
           </div>
         </div>

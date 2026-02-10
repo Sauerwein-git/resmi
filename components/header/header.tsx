@@ -1,58 +1,73 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
 import ModalForm from "../ModalForm/ModalForm";
 
 const DynamicHeader = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHeadStickyVisible, setIsHeadStickyVisible] = useState(false);
-  const [isClient, setIsClient] = useState(false);
   const [isAuditModalOpen, setIsAuditModalOpen] = useState(false);
 
-  const openAuditModal = () => {
-    setIsModalOpen(false);
+  const closeMenu = useCallback(() => setIsMenuOpen(false), []);
+  const closeAuditModal = useCallback(() => setIsAuditModalOpen(false), []);
+
+  const openAuditModal = useCallback(() => {
+    setIsMenuOpen(false);
     setIsAuditModalOpen(true);
-  };
+  }, []);
 
-  const closeAuditModal = () => setIsAuditModalOpen(false);
-
-  useEffect(() => {
-    setIsClient(true);
+  const toggleMenu = useCallback(() => {
+    setIsAuditModalOpen(false);
+    setIsMenuOpen((v) => !v);
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsHeadStickyVisible(window.scrollY >= 350);
-    };
+    const handleScroll = () => setIsHeadStickyVisible(window.scrollY >= 350);
 
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsModalOpen(!isModalOpen);
-  };
+  useEffect(() => {
+    const anyOpen = isMenuOpen || isAuditModalOpen;
+    document.body.style.overflow = anyOpen ? "hidden" : "";
 
-  if (!isClient) return null;
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, isAuditModalOpen]);
+
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== "Escape") return;
+      setIsMenuOpen(false);
+      setIsAuditModalOpen(false);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   return (
     <>
       <div
-        className={`${styles.headSticky} ${
-          isHeadStickyVisible ? styles.visible : ""
-        }`}
+        className={`${styles.headSticky} ${isHeadStickyVisible ? styles.visible : ""}`}
+        role="banner"
       >
         <div className={styles.underFlex}>
           <div className={styles.flex}>
             <div className={styles.flexss}>
               <div className={styles.leftBlock}>
-                <Link href="/">
+                <Link href="/" aria-label="На главную">
                   <div className={styles.Tag}>RE SEARCH IT</div>
                   <div className={styles.description}>rock your business</div>
                 </Link>
               </div>
+
               <div className={styles.mediumBlock}>
                 <div className={styles.borderMediumBlock}>
                   <div className={styles.textMediumBlock}>
@@ -63,11 +78,18 @@ const DynamicHeader = () => {
                 </div>
               </div>
             </div>
+
             <div className={styles.rightBLock}>
-              <button className={styles.menu} onClick={toggleMenu}>
+              <button
+                type="button"
+                className={styles.menu}
+                onClick={toggleMenu}
+                aria-expanded={isMenuOpen}
+                aria-controls="header-menu-modal"
+              >
                 МЕНЮ&nbsp;&nbsp;
                 <span className={styles.ravno}>
-                  {isModalOpen ? (
+                  {isMenuOpen ? (
                     <img
                       src="/img/krest.png"
                       alt="Закрыть"
@@ -90,11 +112,11 @@ const DynamicHeader = () => {
                 className={styles.report}
                 onClick={openAuditModal}
               >
-                <div className={styles.reportContent}>
+                <span className={styles.reportContent}>
                   <span className={styles.notry}>
                     <img
                       src="/img/smallzayavka.png"
-                      alt="arrow"
+                      alt="Заявка"
                       width={86}
                       height={14}
                     />
@@ -102,30 +124,41 @@ const DynamicHeader = () => {
                   <span className={styles.try}>
                     <img
                       src="/img/zayavka.png"
-                      alt="arrow"
+                      alt="Заявка"
                       width={190}
                       height={17}
                     />
                   </span>
-                </div>
+                </span>
               </button>
             </div>
           </div>
         </div>
 
-        <div className={styles.fon}></div>
+        <div className={styles.fon} aria-hidden="true" />
       </div>
 
-      {isModalOpen && (
+      {isMenuOpen && (
         <div
           className={styles.modalOverlay}
-          onClick={() => setIsModalOpen(false)}
+          onClick={closeMenu}
+          role="dialog"
+          aria-modal="true"
         >
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            <span
+          <div
+            id="header-menu-modal"
+            className={styles.modal}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
               className={styles.modalClose}
-              onClick={() => setIsModalOpen(false)}
-            ></span>
+              onClick={closeMenu}
+              aria-label="Закрыть меню"
+            >
+              ×
+            </button>
+
             <div className={`${styles.modalContent} ${styles.deskModal}`}>
               <div className={styles.root}>
                 <div className={styles.modalColumn}>
@@ -133,6 +166,7 @@ const DynamicHeader = () => {
                     <div className={styles.modalTitle}>
                       <Link href="/seo">ТРАФИК И КЛИЕНТЫ</Link>
                     </div>
+
                     <ul className={styles.modalList}>
                       <li>
                         <Link href="/context">
@@ -142,19 +176,29 @@ const DynamicHeader = () => {
                       <li>
                         <Link href="/seo">SEO-продвижение</Link>
                       </li>
-                      <li onClick={openAuditModal}>
-                        <span className={styles.modalRedText}>
-                          <span className={styles.red}>Бесплатный аудит</span>{" "}
-                          вашей рекламы
-                        </span>
+                      <li>
+                        <button
+                          type="button"
+                          className={styles.modalLinkButton}
+                          onClick={openAuditModal}
+                        >
+                          <span className={styles.modalRedText}>
+                            <span className={styles.red}>Бесплатный аудит</span>{" "}
+                            вашей рекламы
+                          </span>
+                        </button>
                       </li>
                     </ul>
                   </div>
+
                   <div className={styles.metaLink}>
                     <div className={styles.numberLink}>Позвонить</div>
-                    <div className={styles.linkOfMeta}>+7 999 999 99 99</div>
+                    <a className={styles.linkOfMeta} href="tel:+79999999999">
+                      +7 999 999 99 99
+                    </a>
                   </div>
                 </div>
+
                 <div className={styles.modalColumn}>
                   <div className={styles.underMovalColumn}>
                     <div className={`${styles.modalTitle} ${styles.flMT}`}>
@@ -163,17 +207,25 @@ const DynamicHeader = () => {
                       </div>
                       <div className={styles.textSoon}>скоро</div>
                     </div>
+
                     <ul className={styles.modalList}>
                       <li>Повышение конверсии сайта</li>
                       <li>Разработка сайта</li>
                       <li>Разработка приложения</li>
                     </ul>
                   </div>
+
                   <div className={styles.metaLink}>
                     <div className={styles.numberLink}>Написать</div>
-                    <div className={styles.linkOfMeta}>hi@research-it.ru</div>
+                    <a
+                      className={styles.linkOfMeta}
+                      href="mailto:hi@research-it.ru"
+                    >
+                      hi@research-it.ru
+                    </a>
                   </div>
                 </div>
+
                 <div className={styles.modalColumn}>
                   <div className={styles.underMovalColumn}>
                     <div
@@ -181,8 +233,8 @@ const DynamicHeader = () => {
                       style={{ maxWidth: "460px" }}
                     >
                       <Link href="/about">О нас</Link>
-                      <Link href="/blog">Блог</Link>
                     </div>
+
                     <div className={`${styles.modalTitle} ${styles.TitleFlex}`}>
                       Наши клиенты заработали
                       <br />
@@ -190,6 +242,7 @@ const DynamicHeader = () => {
                         более 1 368 000 000 <span className="rub">₽</span>
                       </span>
                     </div>
+
                     <ul className={styles.modalList}>
                       <li>
                         <Link href="/case">
@@ -201,6 +254,7 @@ const DynamicHeader = () => {
                       </li>
                     </ul>
                   </div>
+
                   <div
                     className={`${styles.metaLink} ${styles.metaLinkLastChild}`}
                   >
@@ -232,14 +286,21 @@ const DynamicHeader = () => {
                     <li>
                       <Link href="/seo">SEO-продвижение</Link>
                     </li>
-                    <li onClick={openAuditModal}>
-                      <span className={styles.modalRedText}>
-                        <span className={styles.red}>Бесплатный аудит</span>{" "}
-                        вашей рекламы
-                      </span>
+                    <li>
+                      <button
+                        type="button"
+                        className={styles.modalLinkButton}
+                        onClick={openAuditModal}
+                      >
+                        <span className={styles.modalRedText}>
+                          <span className={styles.red}>Бесплатный аудит</span>{" "}
+                          вашей рекламы
+                        </span>
+                      </button>
                     </li>
                   </ul>
                 </div>
+
                 <div className={styles.modalColumn}>
                   <div className={styles.modalTitle}>Сайты и приложения</div>
                   <ul className={styles.modalList}>
@@ -256,6 +317,7 @@ const DynamicHeader = () => {
                     </li>
                   </ul>
                 </div>
+
                 <div className={styles.modalColumn}>
                   <div className={styles.modalTitle}>О нас</div>
                   <div
@@ -263,7 +325,7 @@ const DynamicHeader = () => {
                   >
                     Наши клиенты заработали
                     <br />
-                    <span className={styles.red}>более 1 368 000 000 </span>
+                    <span className={styles.red}>более 1 368 000 000</span>
                   </div>
                   <ul className={styles.modalList}>
                     <li>
@@ -274,14 +336,24 @@ const DynamicHeader = () => {
                     </li>
                   </ul>
                 </div>
+
                 <div className={styles.metaLink}>
                   <div className={styles.numberLink}>Позвонить</div>
-                  <div className={styles.linkOfMeta}>+7 999 999 99 99</div>
+                  <a className={styles.linkOfMeta} href="tel:+79999999999">
+                    +7 999 999 99 99
+                  </a>
                 </div>
+
                 <div className={styles.metaLink}>
                   <div className={styles.numberLink}>Написать</div>
-                  <div className={styles.linkOfMeta}>hi@research-it.ru</div>
+                  <a
+                    className={styles.linkOfMeta}
+                    href="mailto:hi@research-it.ru"
+                  >
+                    hi@research-it.ru
+                  </a>
                 </div>
+
                 <div
                   className={`${styles.metaLink} ${styles.metaLinkLastChild}`}
                 >
@@ -305,12 +377,12 @@ const DynamicHeader = () => {
       {isAuditModalOpen && (
         <div
           className={styles.modalOverlay}
-          style={{ zIndex: 2000 }}
           onClick={closeAuditModal}
+          role="dialog"
+          aria-modal="true"
         >
           <div
-            className={styles.modal}
-            style={{ zIndex: 2001, padding: "0px" }}
+            className={`${styles.modal} ${styles.modalAudit}`}
             onClick={(e) => e.stopPropagation()}
           >
             <ModalForm onClose={closeAuditModal} />

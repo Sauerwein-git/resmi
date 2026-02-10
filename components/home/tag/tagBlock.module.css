@@ -1,3 +1,4 @@
+/* components/TagBlock/tagBlock.module.css */
 .background {
   background-color: #404850;
   padding-top: 30px;
@@ -8,22 +9,36 @@
 }
 
 .section {
-  max-width: 1600px;
+  max-width: 1520px;
   width: 100%;
   margin: 0 auto;
 }
 
-.tag {
-  font-family: "BebasNeue";
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -12.6px;
-  display: block;
-  margin: 0 auto;
+.tagPlaceholder {
   width: 100%;
-  white-space: normal;
-  word-break: break-word;
-  overflow: hidden;
+}
+
+.tag {
+  font-family: "Bebas Neue", "BebasNeue", sans-serif;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+
+  font-size: 420px;
+  line-height: 351px;
+  letter-spacing: -0.03em;
+
+  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+
+  position: relative;
+  left: -17px;
+  top: 0.02px;
+
+  transform-origin: left bottom;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
 }
 
 .block {
@@ -32,6 +47,7 @@
   margin: 0 auto;
   border-top: 1px solid #666d73;
   display: flex;
+  margin-top: 50px;
 }
 
 .leftBlock,
@@ -76,11 +92,11 @@
 }
 
 .tagRightBlock {
-  font-family: "BebasNeue";
+  font-family: "Bebas Neue", "BebasNeue", sans-serif;
   font-weight: 700;
   font-size: 74px;
   line-height: 74px;
-  letter-spacing: -0.74px;
+  letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 1);
   max-width: 630px;
 }
@@ -96,11 +112,11 @@
   max-width: 720px;
   width: 100%;
   color: rgba(255, 255, 255, 1);
-  font-family: "BebasNeue";
+  font-family: "Bebas Neue", "BebasNeue", sans-serif;
   font-weight: 700;
   font-size: 28px;
   line-height: 100%;
-  letter-spacing: 0.56px;
+  letter-spacing: 0.02em;
   margin-top: 55px;
   display: flex;
   height: 90px;
@@ -111,7 +127,7 @@
 
 .button img {
   position: relative;
-  top: -2px;
+  top: -3px;
 }
 
 .textButton {
@@ -161,8 +177,13 @@
   .tag {
     font-size: 94.44px;
     line-height: 78.92px;
-    letter-spacing: -3px;
+    letter-spacing: -0.03em;
     margin: 0;
+    left: 0;
+    top: 0;
+    width: auto;
+    transform: none !important;
+    transform-origin: left bottom;
   }
 
   .imageBlock {
@@ -173,7 +194,7 @@
   .tagRightBlock {
     font-size: 45px;
     line-height: 44px;
-    letter-spacing: -0.45px;
+    letter-spacing: -0.01em;
     max-width: 345px;
     width: 100%;
     margin-top: 20px;
@@ -194,7 +215,7 @@
     height: 70px;
     font-size: 20px;
     line-height: 100%;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.02em;
   }
 
   .button img {

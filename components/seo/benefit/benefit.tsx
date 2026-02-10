@@ -117,7 +117,7 @@ export const Benefit: React.FC = () => {
                 <div className={styles.ltb}>
                   <div className={styles.numl}>04</div>
                   <div className={styles.tagl} style={{ maxWidth: "700px" }}>
-                    Продвижение в выдаче<span className="red">нейросетей</span>
+                    Продвижение в выдаче <span className="red">нейросетей</span>
                   </div>
                 </div>
                 <div className={styles.NEW}>NEW</div>
